@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         events.OnMove += StartMove;
+        events.OnChangeSpeed += UpdateSpeed;
     }
 
     private void CacheComponents()
@@ -53,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateSpeed()
     {
         movementSpeed += increaseSpeedStep;
+        follower.followSpeed = movementSpeed;
+    }
+
+    private void UpdateSpeed(float speed)
+    {
+        movementSpeed = speed;
         follower.followSpeed = movementSpeed;
     }
 }

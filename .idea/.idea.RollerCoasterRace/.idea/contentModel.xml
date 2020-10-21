@@ -468,7 +468,12 @@
             <e p="Observer.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
+          <e p="Obstacles" t="Include">
+            <e p="IObstacle.cs" t="Include" />
+            <e p="Wall.cs" t="Include" />
+          </e>
           <e p="Player" t="Include">
+            <e p="PlayerCollision.cs" t="Include" />
             <e p="PlayerEvents.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
