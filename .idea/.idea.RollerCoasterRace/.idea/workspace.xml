@@ -4,7 +4,12 @@
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/trolley.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/trolley.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RailwaySplines/Railways_Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RailwaySplines/Railways_Level1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +22,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Swipe/SwipeLogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Cinemachine/Timeline/CinemachineTrack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Dev.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -30,13 +36,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Swipe/SwipeLogger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Swipe/SwipeDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RailwaysHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RailwaysManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -80,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603184862017</updated>
       <workItem from="1603184863603" duration="8418000" />
-      <workItem from="1603267037177" duration="1185000" />
+      <workItem from="1603267037177" duration="2232000" />
+      <workItem from="1603273996189" duration="603000" />
     </task>
     <servers />
   </component>
