@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IObstacle
 {
-    void Initiate(PlayerEvents playerEvents);
+    void Initiate(StickmanEvents stickmanEvents);
 }

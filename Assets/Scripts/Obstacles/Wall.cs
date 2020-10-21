@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour, IObstacle
 {
-    public void Initiate(PlayerEvents playerEvents)
+    public void Initiate(StickmanEvents stickmanEvents)
     {
-        playerEvents.OnChangeSpeed(2.0f);
+        stickmanEvents.OnChangeSpeed(2.0f);
         DestroyAnimation();
     }
 
     private void DestroyAnimation()
     {
-        // Beatiful animation
+        // Beautiful animation
         gameObject.SetActive(false);
     }
 }

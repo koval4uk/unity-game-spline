@@ -474,9 +474,9 @@
           </e>
           <e p="Player" t="Include">
             <e p="PlayerCollision.cs" t="Include" />
-            <e p="PlayerEvents.cs" t="Include" />
-            <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
+            <e p="StickmanEvents.cs" t="Include" />
+            <e p="StickmanMovement.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
           <e p="RailwaysManager.cs" t="Include" />

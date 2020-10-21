@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class StickmanCollision : MonoBehaviour
 {
-    private PlayerEvents playerEvents;
+    private StickmanEvents stickmanEvents;
 
     private void Awake()
     {
@@ -14,7 +14,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void CacheComponents()
     {
-        playerEvents = GetComponent<PlayerEvents>();
+        stickmanEvents = GetComponent<StickmanEvents>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -27,7 +27,7 @@ public class PlayerCollision : MonoBehaviour
         Debug.Log($"Trigger with {other.gameObject.name}");
         if (other.gameObject.CompareTag(GameConstants.TagObstacle))
         {
-            other.GetComponent<IObstacle>().Initiate(playerEvents);
+            other.GetComponent<IObstacle>().Initiate(stickmanEvents);
         }
     }
 }

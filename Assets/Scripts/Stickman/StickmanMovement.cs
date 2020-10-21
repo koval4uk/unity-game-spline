@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using Dreamteck.Splines;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class StickmanMovement : MonoBehaviour
 {
-    private PlayerEvents events;
+    private StickmanEvents events;
     private SplineFollower follower;
     private float movementSpeed = 2.0f;
     private float limitMovementSpeed = 28.0f;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CacheComponents()
     {
-        events = GetComponent<PlayerEvents>();
+        events = GetComponent<StickmanEvents>();
         follower = GetComponent<SplineFollower>();
     }
 
