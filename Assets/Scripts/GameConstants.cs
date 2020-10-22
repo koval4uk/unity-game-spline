@@ -6,4 +6,7 @@ public class GameConstants : MonoBehaviour
 {
     public const string PrefsCurrentLevel = "currentLevel";
     public const string TagObstacle = "Obstacle";
+    public const float PlayerStartMovementSpeed = 2.0f;
+    public const float PlayerLimitMovementSpeed = 28.0f;
+    public const float PlayerIncreaseSpeedStep = .45f;
 }
