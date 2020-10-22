@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class StickmanMovement : MonoBehaviour
 {
+    [SerializeField] private float startMovementSpeed;
+    [SerializeField] private float limitMovementSpeed;
+    [SerializeField] private float increaseSpeedStep;
+    
     private StickmanEvents events;
     private SplineFollower follower;
-    private float movementSpeed = 2.0f;
-    private float limitMovementSpeed = 28.0f;
-    private float increaseSpeedStep = 0.45f;
     private float speedMultiplier = 1f;
 
     private void Awake()
@@ -21,6 +22,7 @@ public class StickmanMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log($"Enable Stickman Movement on {gameObject.name}");
         events.OnMove += StartMove;
         events.OnChangeSpeed += SetSpeed;
         events.OnMultiplySpeed += SetSpeedMultiplier;
@@ -34,11 +36,12 @@ public class StickmanMovement : MonoBehaviour
 
     private void Init()
     {
-        follower.followSpeed = movementSpeed;
+        follower.followSpeed = startMovementSpeed;
     }
 
     private void StartMove()
     {
+        Debug.Log($"Stickman {gameObject.name} start moving");
         follower.follow = true;
         StartCoroutine(IncreaseSpeed());
     }
@@ -46,7 +49,7 @@ public class StickmanMovement : MonoBehaviour
     private IEnumerator IncreaseSpeed()
     {
         Debug.Log("Increase Speed Start!");
-        while (movementSpeed < limitMovementSpeed)
+        while (startMovementSpeed < limitMovementSpeed)
         {
             yield return new WaitForSeconds(0.1f);
             movementSpeed += increaseSpeedStep;
@@ -55,14 +58,15 @@ public class StickmanMovement : MonoBehaviour
     }
 
     private void UpdateSpeed()
-    {        
-        follower.followSpeed = movementSpeed * speedMultiplier;
+    {
+        startMovementSpeed += increaseSpeedStep;
+        follower.followSpeed = startMovementSpeed;
     }
 
     private void SetSpeed(float speed)
     {
-        movementSpeed = speed;
-        UpdateSpeed();
+        startMovementSpeed = speed;
+        follower.followSpeed = startMovementSpeed;
     }
 
     private void SetSpeedMultiplier(float multiplier)
