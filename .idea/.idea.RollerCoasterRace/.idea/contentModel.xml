@@ -470,12 +470,17 @@
           </e>
           <e p="Obstacles" t="Include">
             <e p="IObstacle.cs" t="Include" />
+            <e p="Nitro.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
+          <e p="RailModificators" t="Include">
+            <e p="IRailModificator.cs" t="Include" />
+            <e p="SpeedBooster.cs" t="Include" />
+          </e>
           <e p="RailwaysManager.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="SpawnManager.cs" t="Include" />
@@ -490,6 +495,7 @@
           </e>
           <e p="UI" t="Include">
             <e p="EndPanelLevelText.cs" t="Include" />
+            <e p="ProgressBarManager.cs" t="Include" />
             <e p="ScoreManager.cs" t="Include" />
             <e p="UIAnimationManager.cs" t="Include" />
             <e p="UIEffectsHolder.cs" t="Include" />
