@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class StickmanMovement : MonoBehaviour
 {
+    [SerializeField] private float startMovementSpeed;
+    [SerializeField] private float limitMovementSpeed;
+    [SerializeField] private float increaseSpeedStep;
+    
     private StickmanEvents events;
     private SplineFollower follower;
-    private float startMovementSpeed;
-    private float limitMovementSpeed;
-    private float increaseSpeedStep;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class StickmanMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log($"Enable Stickman Movement on {gameObject.name}");
         events.OnMove += StartMove;
         events.OnChangeSpeed += UpdateSpeed;
     }
@@ -32,14 +34,12 @@ public class StickmanMovement : MonoBehaviour
 
     private void Init()
     {
-        startMovementSpeed = GameConstants.PlayerStartMovementSpeed;
-        limitMovementSpeed = GameConstants.PlayerLimitMovementSpeed;
-        increaseSpeedStep = GameConstants.PlayerIncreaseSpeedStep;
         follower.followSpeed = startMovementSpeed;
     }
 
     private void StartMove()
     {
+        Debug.Log($"Stickman {gameObject.name} start moving");
         follower.follow = true;
         StartCoroutine(IncreaseSpeed());
     }
