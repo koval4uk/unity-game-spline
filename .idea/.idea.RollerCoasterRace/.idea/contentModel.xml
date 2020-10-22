@@ -473,15 +473,17 @@
             <e p="Wall.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
-            <e p="PlayerCollision.cs" t="Include" />
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
-            <e p="StickmanEvents.cs" t="Include" />
-            <e p="StickmanMovement.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
           <e p="RailwaysManager.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="SpawnManager.cs" t="Include" />
+          <e p="Stickman" t="Include">
+            <e p="StickmanCollision.cs" t="Include" />
+            <e p="StickmanEvents.cs" t="Include" />
+            <e p="StickmanMovement.cs" t="Include" />
+          </e>
           <e p="Swipe" t="Include">
             <e p="SwipeDetector.cs" t="Include" />
             <e p="SwipeLogger.cs" t="Include" />
