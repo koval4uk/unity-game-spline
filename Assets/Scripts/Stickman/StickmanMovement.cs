@@ -52,26 +52,25 @@ public class StickmanMovement : MonoBehaviour
         while (startMovementSpeed < limitMovementSpeed)
         {
             yield return new WaitForSeconds(0.1f);
-            movementSpeed += increaseSpeedStep;
+            startMovementSpeed += increaseSpeedStep;
             UpdateSpeed();
         }
-    }
-
-    private void UpdateSpeed()
-    {
-        startMovementSpeed += increaseSpeedStep;
-        follower.followSpeed = startMovementSpeed;
-    }
+    }    
 
     private void SetSpeed(float speed)
     {
         startMovementSpeed = speed;
-        follower.followSpeed = startMovementSpeed;
+        UpdateSpeed();
     }
 
     private void SetSpeedMultiplier(float multiplier)
     {
         speedMultiplier = multiplier;
         UpdateSpeed();
+    }
+
+    private void UpdateSpeed()
+    {
+        follower.followSpeed = startMovementSpeed * speedMultiplier;
     }
 }
