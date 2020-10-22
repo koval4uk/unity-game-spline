@@ -11,6 +11,7 @@ public class StickmanMovement : MonoBehaviour
     private float movementSpeed = 2.0f;
     private float limitMovementSpeed = 28.0f;
     private float increaseSpeedStep = 0.45f;
+    private float speedMultiplier = 1f;
 
     private void Awake()
     {
@@ -21,7 +22,8 @@ public class StickmanMovement : MonoBehaviour
     private void OnEnable()
     {
         events.OnMove += StartMove;
-        events.OnChangeSpeed += UpdateSpeed;
+        events.OnChangeSpeed += SetSpeed;
+        events.OnMultiplySpeed += SetSpeedMultiplier;
     }
 
     private void CacheComponents()
@@ -47,19 +49,25 @@ public class StickmanMovement : MonoBehaviour
         while (movementSpeed < limitMovementSpeed)
         {
             yield return new WaitForSeconds(0.1f);
+            movementSpeed += increaseSpeedStep;
             UpdateSpeed();
         }
     }
 
     private void UpdateSpeed()
-    {
-        movementSpeed += increaseSpeedStep;
-        follower.followSpeed = movementSpeed;
+    {        
+        follower.followSpeed = movementSpeed * speedMultiplier;
     }
 
-    private void UpdateSpeed(float speed)
+    private void SetSpeed(float speed)
     {
         movementSpeed = speed;
-        follower.followSpeed = movementSpeed;
+        UpdateSpeed();
+    }
+
+    private void SetSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
+        UpdateSpeed();
     }
 }
