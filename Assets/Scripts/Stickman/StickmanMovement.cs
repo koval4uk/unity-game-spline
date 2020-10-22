@@ -12,6 +12,7 @@ public class StickmanMovement : MonoBehaviour
     
     private StickmanEvents events;
     private SplineFollower follower;
+    private float speedMultiplier = 1f;
 
     private void Awake()
     {
@@ -23,7 +24,8 @@ public class StickmanMovement : MonoBehaviour
     {
         Debug.Log($"Enable Stickman Movement on {gameObject.name}");
         events.OnMove += StartMove;
-        events.OnChangeSpeed += UpdateSpeed;
+        events.OnChangeSpeed += SetSpeed;
+        events.OnMultiplySpeed += SetSpeedMultiplier;
     }
 
     private void CacheComponents()
@@ -50,19 +52,25 @@ public class StickmanMovement : MonoBehaviour
         while (startMovementSpeed < limitMovementSpeed)
         {
             yield return new WaitForSeconds(0.1f);
+            startMovementSpeed += increaseSpeedStep;
             UpdateSpeed();
         }
+    }    
+
+    private void SetSpeed(float speed)
+    {
+        startMovementSpeed = speed;
+        UpdateSpeed();
+    }
+
+    private void SetSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
+        UpdateSpeed();
     }
 
     private void UpdateSpeed()
     {
-        startMovementSpeed += increaseSpeedStep;
-        follower.followSpeed = startMovementSpeed;
-    }
-
-    private void UpdateSpeed(float speed)
-    {
-        startMovementSpeed = speed;
-        follower.followSpeed = startMovementSpeed;
+        follower.followSpeed = startMovementSpeed * speedMultiplier;
     }
 }

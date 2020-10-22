@@ -25,9 +25,22 @@ public class StickmanCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log($"Trigger with {other.gameObject.name}");
-        if (other.gameObject.CompareTag(GameConstants.TagObstacle))
+        if (other.CompareTag(GameConstants.TagObstacle))
         {
             other.GetComponent<IObstacle>().Initiate(stickmanEvents);
+        }
+
+        if(other.CompareTag(GameConstants.TagRailModificator))
+        {
+            other.GetComponent<IRailModificator>().Play(stickmanEvents);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag(GameConstants.TagRailModificator))
+        {
+            other.GetComponent<IRailModificator>().Stop(stickmanEvents);
         }
     }
 }
