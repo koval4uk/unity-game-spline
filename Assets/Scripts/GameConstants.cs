@@ -14,4 +14,7 @@ public class GameConstants : MonoBehaviour
 
     public const float nitroMultiplier = 1.5f;
     public const float nitroTime = 2.5f;
+    
+    public const int ChanceToDodge = 100;
+    public const float DodgeCooldown = .1f;
 }

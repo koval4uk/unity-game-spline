@@ -10,9 +10,9 @@ public class StickmanEvents : MonoBehaviour
     public Action<float> OnMultiplySpeed = delegate { Debug.Log("OnMultiplySpeed Triggered!"); };
     public Action OnSetInitialSpeed = delegate { Debug.Log("OnSetInitialSpeed Triggered!"); };
     
-    
     // Unique events for enemy
     public Action OnObstacleDetected = delegate { Debug.Log("OnObstacleDetected Triggered!"); };
+    public Action<int> OnSwitchRailway = delegate { Debug.Log("OnSwitchRailway triggered with index"); }; // Возвращает индекс дорожки (0, 1, 2)
 
     private void OnEnable()
     {
