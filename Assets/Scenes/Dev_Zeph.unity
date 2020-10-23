@@ -8349,6 +8349,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.4900002
       objectReference: {fileID: 0}
+    - target: {fileID: 98160779831833234, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 98160779831833234, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 98160779831833234, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c1c0eefd17627747af02b52d01d28c7, type: 2}
     - target: {fileID: 1389494095021602011, guid: 6136ded66c8204349a8827aec93de431,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -8358,6 +8373,126 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266174838635448275, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266174838635448275, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266174838635448275, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266174838635448275, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.9969855
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266174838635448275, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0775889
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266174838635448275, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -188.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: useRigidbodyForVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startColor.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.2028302
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.39997953
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 18504
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime2
+      value: 47031
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635928224111385663, guid: 6136ded66c8204349a8827aec93de431,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3769903608847389995, guid: 6136ded66c8204349a8827aec93de431,
         type: 3}
