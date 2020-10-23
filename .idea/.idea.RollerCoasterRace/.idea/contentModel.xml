@@ -460,6 +460,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Enemy" t="Include">
+            <e p="EnemyAI.cs" t="Include" />
+            <e p="ObstacleChecker.cs" t="Include" />
+          </e>
           <e p="EventTriggers.cs" t="Include" />
           <e p="GameConstants.cs" t="Include" />
           <e p="GameStarter.cs" t="Include" />
