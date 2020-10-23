@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class EnemyUI : MonoBehaviour
+public class StickmanUI : MonoBehaviour
 {
-    [SerializeField] private TextMesh textMesh;
+    [SerializeField] private TextMeshPro textMesh;
 
     private StickmanEvents stickmanEvents;
 
@@ -18,5 +18,4 @@ public class EnemyUI : MonoBehaviour
     {
         // Change Placement Text
     }
-    
 }
