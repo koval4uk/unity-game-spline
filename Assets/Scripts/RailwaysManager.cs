@@ -5,10 +5,18 @@ using Dreamteck.Splines;
 using Singleton;
 using UnityEngine;
 
+public enum Railways
+{
+    Left,
+    Middle,
+    Right
+}
 public class RailwaysManager : Singleton<RailwaysManager>
 {
     [SerializeField] private SplineComputer[] allRailways;
-    private int activeRailwayIndex = 1;
+    public SplineComputer[] AllRailways => allRailways;
+
+    private int activeRailwayIndex = (int) Railways.Middle; //Start railway
 
     public SplineComputer GetActiveRailway(SwipeData swipeData)
     {
@@ -25,4 +33,5 @@ public class RailwaysManager : Singleton<RailwaysManager>
         }
         return allRailways[activeRailwayIndex];
     }
+    
 }

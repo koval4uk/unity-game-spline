@@ -460,8 +460,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="DebugTools.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="EnemyAI.cs" t="Include" />
+            <e p="EnemyRailwaySwitcher.cs" t="Include" />
             <e p="ObstacleChecker.cs" t="Include" />
           </e>
           <e p="EventTriggers.cs" t="Include" />
@@ -492,6 +494,7 @@
             <e p="StickmanCollision.cs" t="Include" />
             <e p="StickmanEvents.cs" t="Include" />
             <e p="StickmanMovement.cs" t="Include" />
+            <e p="StickmanUI.cs" t="Include" />
           </e>
           <e p="Swipe" t="Include">
             <e p="SwipeDetector.cs" t="Include" />
