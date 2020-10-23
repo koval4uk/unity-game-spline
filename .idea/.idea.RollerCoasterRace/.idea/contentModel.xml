@@ -464,6 +464,7 @@
           <e p="Enemy" t="Include">
             <e p="EnemyAI.cs" t="Include" />
             <e p="EnemyRailwaySwitcher.cs" t="Include" />
+            <e p="EnemyUI.cs" t="Include" />
             <e p="ObstacleChecker.cs" t="Include" />
           </e>
           <e p="EventTriggers.cs" t="Include" />
