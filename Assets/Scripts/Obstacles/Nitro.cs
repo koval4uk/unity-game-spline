@@ -16,6 +16,7 @@ public class Nitro : MonoBehaviour, IObstacle
     private IEnumerator Effect(StickmanEvents stickmanEvents)
     {
         stickmanEvents.OnMultiplySpeed(GameConstants.nitroMultiplier);
+        stickmanEvents.OnNitroAnimation();
         warpEffect.Play();
         yield return new WaitForSeconds(GameConstants.nitroTime);
         stickmanEvents.OnMultiplySpeed(1f);
