@@ -9,6 +9,7 @@ public class StickmanEvents : MonoBehaviour
     public Action<float> OnChangeSpeed = delegate { Debug.Log("OnChangeSpeed Triggered!"); };
     public Action<float> OnMultiplySpeed = delegate { Debug.Log("OnMultiplySpeed Triggered!"); };
     public Action OnSetInitialSpeed = delegate { Debug.Log("OnSetInitialSpeed Triggered!"); };
+    public Action OnNitroAnimation = delegate { Debug.Log("OnRocketAnimation Triggered!"); };
     
     // Unique events for enemy
     public Action OnObstacleDetected = delegate { Debug.Log("OnObstacleDetected Triggered!"); };
