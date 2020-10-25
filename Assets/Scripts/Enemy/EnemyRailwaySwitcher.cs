@@ -73,7 +73,7 @@ public class EnemyRailwaySwitcher : MonoBehaviour
 
     IEnumerator ChangeRailway()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
 
         splineFollower.spline = allRailways[activeRailwayIndex];
         stickmanEvents.OnSwitchRailway(activeRailwayIndex);
@@ -82,13 +82,13 @@ public class EnemyRailwaySwitcher : MonoBehaviour
     private void TurnLeft()
     {
         activeRailwayIndex--;
-        transform.DOMoveX(transform.position.x - 4f, 0.5f);
+        transform.DOMoveX(transform.position.x - 4f, GameConstants.SwitchRailwayTime);
     }
 
     private void TurnRight()
     {
         activeRailwayIndex++;
-        transform.DOMoveX(transform.position.x + 4f, 0.5f);
+        transform.DOMoveX(transform.position.x + 4f, GameConstants.SwitchRailwayTime);
     }
 
     private void CheckAvailableRailways()
