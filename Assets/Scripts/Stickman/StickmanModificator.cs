@@ -8,8 +8,10 @@ public class StickmanModificator : MonoBehaviour
 {
     [SerializeField] private GameObject nitro;
     private CinemachineVirtualCamera camera;
-    
     private StickmanEvents stickmanEvents;
+    private int originCameraFOV = 40;
+    private int destCameraFOV = 60;
+    private float pastTime = 0;
 
     private void Awake()
     {
@@ -19,13 +21,27 @@ public class StickmanModificator : MonoBehaviour
 
     private void OnEnable()
     {
-        stickmanEvents.OnNitroAnimation += NitroAnimation;
+        stickmanEvents.OnNitroAnimation += delegate { StartCoroutine(NitroAnimation()); };
     }
 
-    private void NitroAnimation()
+    private IEnumerator NitroAnimation()
     {
         nitro.SetActive(true);
-        camera.m_Lens.FieldOfView = 60;
+        while (camera.m_Lens.FieldOfView < destCameraFOV)
+        {
+            yield return new WaitForFixedUpdate();
+            float step = Time.fixedDeltaTime * 24;
+            pastTime += Time.fixedDeltaTime;
+            camera.m_Lens.FieldOfView += step;
+        }
+        float difference = GameConstants.nitroTime - pastTime;
+        yield return new WaitForSeconds(difference);
+        while (camera.m_Lens.FieldOfView > originCameraFOV)
+        {
+            yield return new WaitForFixedUpdate();
+            float step = Time.fixedDeltaTime * 24;
+            camera.m_Lens.FieldOfView -= step;
+        }
     }
 
 }
