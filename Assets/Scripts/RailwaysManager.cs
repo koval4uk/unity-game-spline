@@ -17,6 +17,7 @@ public class RailwaysManager : Singleton<RailwaysManager>
     public SplineComputer[] AllRailways => allRailways;
 
     private int activeRailwayIndex = (int) Railways.Middle; //Start railway
+    public int ActimeRailwayIndex => activeRailwayIndex;
 
     public SplineComputer GetActiveRailway(SwipeData swipeData)
     {
