@@ -5,10 +5,12 @@ using System.Linq;
 using Dreamteck.Splines;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 
 public class EnemyRailwaySwitcher : MonoBehaviour
 {
     private StickmanEvents stickmanEvents;
+    private EnemyAnimationEvents enemyAnimationEvents;
     private SplineFollower splineFollower;
     private SplineComputer[] allRailways;
 
@@ -27,6 +29,7 @@ public class EnemyRailwaySwitcher : MonoBehaviour
     private void CacheComponents()
     {
         stickmanEvents = GetComponent<StickmanEvents>();
+        enemyAnimationEvents = GetComponent<EnemyAnimationEvents>();
         splineFollower = GetComponent<SplineFollower>();
     }
     
@@ -57,13 +60,20 @@ public class EnemyRailwaySwitcher : MonoBehaviour
         {
             if (canTurnLeft)
             {
-                TurnLeft();
+                TurnLeft();                
             }
             else if (canTurnRight)
             {
                 TurnRight();
             }
         }
+
+        StartCoroutine(ChangeRailway());
+    }
+
+    IEnumerator ChangeRailway()
+    {
+        yield return new WaitForSeconds(0.3f);
 
         splineFollower.spline = allRailways[activeRailwayIndex];
         stickmanEvents.OnSwitchRailway(activeRailwayIndex);
@@ -72,11 +82,13 @@ public class EnemyRailwaySwitcher : MonoBehaviour
     private void TurnLeft()
     {
         activeRailwayIndex--;
+        transform.DOMoveX(transform.position.x - 4f, 0.5f);
     }
 
     private void TurnRight()
     {
         activeRailwayIndex++;
+        transform.DOMoveX(transform.position.x + 4f, 0.5f);
     }
 
     private void CheckAvailableRailways()

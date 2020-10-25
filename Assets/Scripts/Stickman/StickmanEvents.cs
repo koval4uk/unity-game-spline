@@ -14,6 +14,8 @@ public class StickmanEvents : MonoBehaviour
     // Unique events for enemy
     public Action OnObstacleDetected = delegate { Debug.Log("OnObstacleDetected Triggered!"); };
     public Action<int> OnSwitchRailway = delegate { Debug.Log("OnSwitchRailway triggered with index"); }; // Возвращает индекс дорожки (0, 1, 2)
+    public Action OnHitFromBehind = delegate { Debug.Log("OnHitFromBehind Triggered!"); };
+    public Action OnHitFromSide = delegate { Debug.Log("OnHitFromSide Triggered!"); };
 
     private void OnEnable()
     {

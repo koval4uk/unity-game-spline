@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour
     private void OnEnable()
     {
         stickmanEvents.OnObstacleDetected += SwitchSpline;
+        stickmanEvents.OnHitFromBehind += GetHitFromBehind;
+        stickmanEvents.OnHitFromSide += GetHitFromSide;
     }
 
     private void CacheComponents()
@@ -51,5 +53,15 @@ public class EnemyAI : MonoBehaviour
     private void ResetTimer()
     {
         dodgeTimer = 0;
+    }
+
+    private void GetHitFromBehind()
+    {
+        stickmanEvents.OnChangeSpeed(2f);
+    }
+
+    private void GetHitFromSide()
+    {
+        stickmanEvents.OnChangeSpeed(0f);
     }
 }
