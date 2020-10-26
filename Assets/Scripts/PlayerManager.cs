@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    /// <summary>
-    /// Вместо isGameStarted в каждом классе
-    /// используй GameStarter.IsGameStarted
-    /// </summary>
-    private void OnEnable()
+    private StickmanEvents stickmanEvents;
+
+    private void Awake()
     {
-        SubscribeToNecessaryEvets();
+        stickmanEvents = GetComponent<StickmanEvents>();
     }
 
-    public void SubscribeToNecessaryEvets()
+    private void OnEnable()
     {
+        stickmanEvents.OnFinish += Finish;
+    }
+
+    private void Finish()
+    {
+        Observer.Instance.CallOnWinLevel();
     }
 }

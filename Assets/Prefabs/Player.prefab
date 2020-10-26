@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 13860320}
   - component: {fileID: 5855998592124211174}
   - component: {fileID: 1907722175}
+  - component: {fileID: 8997941302536031818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -237,7 +238,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416198735501823345}
-  m_LocalRotation: {x: 0.00000010670726, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.8000002, z: -0.5448626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -566,7 +567,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e23f8f14d8ee814480378605572ca37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nitro: {fileID: 0}
+  nitro: {fileID: 5649924390077751557}
+--- !u!114 &8997941302536031818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416198735501823345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505b56eee86e9fd4a8774d337f233e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4416198735527253674
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,10 +948,16 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 7dcbaeb137c65d44699ccc1e73760e39,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dcbaeb137c65d44699ccc1e73760e39, type: 3}
+--- !u!1 &5649924390077751557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7dcbaeb137c65d44699ccc1e73760e39,
+    type: 3}
+  m_PrefabInstance: {fileID: 4416198736060430348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8661488148975489814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7dcbaeb137c65d44699ccc1e73760e39,

@@ -27,20 +27,29 @@ public class StickmanModificator : MonoBehaviour
     private IEnumerator NitroAnimation()
     {
         nitro.SetActive(true);
-        while (camera.m_Lens.FieldOfView < destCameraFOV)
+        if (stickmanEvents.IsPlayer)
         {
-            yield return new WaitForFixedUpdate();
-            float step = Time.fixedDeltaTime * 24;
-            pastTime += Time.fixedDeltaTime;
-            camera.m_Lens.FieldOfView += step;
+            while (camera.m_Lens.FieldOfView < destCameraFOV)
+            {
+                yield return new WaitForFixedUpdate();
+                float step = Time.fixedDeltaTime * 24;
+                pastTime += Time.fixedDeltaTime;
+                camera.m_Lens.FieldOfView += step;
+            }
+            float difference = GameConstants.nitroTime - pastTime;
+            yield return new WaitForSeconds(difference);
+            while (camera.m_Lens.FieldOfView > originCameraFOV)
+            {
+                yield return new WaitForFixedUpdate();
+                float step = Time.fixedDeltaTime * 24;
+                camera.m_Lens.FieldOfView -= step;
+            }
+            nitro.SetActive(false);
         }
-        float difference = GameConstants.nitroTime - pastTime;
-        yield return new WaitForSeconds(difference);
-        while (camera.m_Lens.FieldOfView > originCameraFOV)
+        else
         {
-            yield return new WaitForFixedUpdate();
-            float step = Time.fixedDeltaTime * 24;
-            camera.m_Lens.FieldOfView -= step;
+            yield return new WaitForSeconds(GameConstants.nitroTime);
+            nitro.SetActive(false);
         }
     }
 

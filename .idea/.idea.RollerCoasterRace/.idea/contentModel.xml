@@ -461,8 +461,11 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="DebugTools.cs" t="Include" />
+          <e p="EffectsHolder.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="EnemyAI.cs" t="Include" />
+            <e p="EnemyAnimation.cs" t="Include" />
+            <e p="EnemyAnimationEvents.cs" t="Include" />
             <e p="EnemyRailwaySwitcher.cs" t="Include" />
             <e p="ObstacleChecker.cs" t="Include" />
           </e>
@@ -470,13 +473,16 @@
           <e p="GameConstants.cs" t="Include" />
           <e p="GameStarter.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
+          <e p="Modificators" t="Include">
+            <e p="IModificator.cs" t="Include" />
+            <e p="Nitro.cs" t="Include" />
+          </e>
           <e p="Observer" t="Include">
             <e p="Observer.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
           <e p="Obstacles" t="Include">
             <e p="IObstacle.cs" t="Include" />
-            <e p="Nitro.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

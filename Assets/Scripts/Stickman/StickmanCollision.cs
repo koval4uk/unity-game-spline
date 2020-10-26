@@ -50,10 +50,20 @@ public class StickmanCollision : MonoBehaviour
         {
             other.GetComponent<IObstacle>().Initiate(stickmanEvents);
         }
+        
+        if(other.CompareTag(GameConstants.TagModificator))
+        {
+            other.GetComponent<IModificator>().Trigger(stickmanEvents);
+        }
 
         if(other.CompareTag(GameConstants.TagRailModificator))
         {
             other.GetComponent<IRailModificator>().Play(stickmanEvents);
+        }
+        
+        if(other.CompareTag(GameConstants.TagFinish))
+        {
+            stickmanEvents.OnFinish();
         }
     }
 
