@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RailwaySplines/Railways_Level1.prefab.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RailwaySplines/Railways_Level1.prefab.orig.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Nitro.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Nitro.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +78,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" />
       </list>
     </option>
   </component>
@@ -142,7 +130,7 @@
       <workItem from="1603440592647" duration="14338000" />
       <workItem from="1603529736865" duration="3364000" />
       <workItem from="1603615331596" duration="3354000" />
-      <workItem from="1603695405696" duration="4199000" />
+      <workItem from="1603695405696" duration="4928000" />
     </task>
     <servers />
   </component>
