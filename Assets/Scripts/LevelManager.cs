@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class LevelManager : MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class LevelManager : MonoBehaviour
 
     private void RestartLevel()
     {
+        DOTween.Clear(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

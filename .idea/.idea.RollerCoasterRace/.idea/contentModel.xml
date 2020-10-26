@@ -460,10 +460,23 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="DebugTools.cs" t="Include" />
+          <e p="EffectsHolder.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="EnemyAI.cs" t="Include" />
+            <e p="EnemyAnimation.cs" t="Include" />
+            <e p="EnemyAnimationEvents.cs" t="Include" />
+            <e p="EnemyRailwaySwitcher.cs" t="Include" />
+            <e p="ObstacleChecker.cs" t="Include" />
+          </e>
           <e p="EventTriggers.cs" t="Include" />
           <e p="GameConstants.cs" t="Include" />
           <e p="GameStarter.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
+          <e p="Modificators" t="Include">
+            <e p="IModificator.cs" t="Include" />
+            <e p="Nitro.cs" t="Include" />
+          </e>
           <e p="Observer" t="Include">
             <e p="Observer.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
@@ -476,13 +489,19 @@
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
+          <e p="RailModificators" t="Include">
+            <e p="IRailModificator.cs" t="Include" />
+            <e p="SpeedBooster.cs" t="Include" />
+          </e>
           <e p="RailwaysManager.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="SpawnManager.cs" t="Include" />
           <e p="Stickman" t="Include">
             <e p="StickmanCollision.cs" t="Include" />
             <e p="StickmanEvents.cs" t="Include" />
+            <e p="StickmanModificator.cs" t="Include" />
             <e p="StickmanMovement.cs" t="Include" />
+            <e p="StickmanUI.cs" t="Include" />
           </e>
           <e p="Swipe" t="Include">
             <e p="SwipeDetector.cs" t="Include" />
@@ -490,6 +509,7 @@
           </e>
           <e p="UI" t="Include">
             <e p="EndPanelLevelText.cs" t="Include" />
+            <e p="ProgressBarManager.cs" t="Include" />
             <e p="ScoreManager.cs" t="Include" />
             <e p="UIAnimationManager.cs" t="Include" />
             <e p="UIEffectsHolder.cs" t="Include" />

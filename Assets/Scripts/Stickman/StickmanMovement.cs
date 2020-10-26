@@ -22,7 +22,6 @@ public class StickmanMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log($"Enable Stickman Movement on {gameObject.name}");
         events.OnMove += StartMove;
         events.OnChangeSpeed += SetSpeed;
         events.OnMultiplySpeed += SetSpeedMultiplier;
@@ -36,6 +35,7 @@ public class StickmanMovement : MonoBehaviour
 
     private void Init()
     {
+        follower.follow = false;
         follower.followSpeed = startMovementSpeed;
     }
 
