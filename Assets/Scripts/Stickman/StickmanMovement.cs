@@ -49,12 +49,20 @@ public class StickmanMovement : MonoBehaviour
     private IEnumerator IncreaseSpeed()
     {
         Debug.Log("Increase Speed Start!");
-        while (startMovementSpeed < limitMovementSpeed)
+        yield return new WaitForSeconds(0.1f);
+        while (GameStarter.IsGameStarted)
         {
+            Debug.Log("<color=blue>Increasing speed!</color>");
             yield return new WaitForSeconds(0.1f);
             startMovementSpeed += increaseSpeedStep;
+            if (startMovementSpeed > limitMovementSpeed)
+            {
+                startMovementSpeed = limitMovementSpeed;
+            }
             UpdateSpeed();
         }
+
+        Debug.Log("<color=red>End Increase speed!</color>");
     }    
 
     private void SetSpeed(float speed)
