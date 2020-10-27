@@ -482,6 +482,7 @@
             <e p="Singleton.cs" t="Include" />
           </e>
           <e p="Obstacles" t="Include">
+            <e p="BrickExplosion.cs" t="Include" />
             <e p="IObstacle.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
           </e>
