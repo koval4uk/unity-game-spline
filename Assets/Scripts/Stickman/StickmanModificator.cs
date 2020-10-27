@@ -52,5 +52,4 @@ public class StickmanModificator : MonoBehaviour
             nitro.SetActive(false);
         }
     }
-
 }

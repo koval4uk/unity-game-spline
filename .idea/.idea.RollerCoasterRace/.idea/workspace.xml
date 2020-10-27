@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/BrickLarge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/BrickLarge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/BrickMedium.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/BrickMedium.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/BrickSmall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/BrickSmall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Interactables/Wall/Wall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevBogdan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevBogdan.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev_Level_Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev_Level_Example.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,9 +86,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +140,7 @@
       <workItem from="1603529736865" duration="3364000" />
       <workItem from="1603615331596" duration="3354000" />
       <workItem from="1603695405696" duration="4937000" />
-      <workItem from="1603786341232" duration="3576000" />
+      <workItem from="1603786341232" duration="4677000" />
     </task>
     <servers />
   </component>
