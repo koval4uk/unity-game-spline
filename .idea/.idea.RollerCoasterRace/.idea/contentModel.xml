@@ -490,6 +490,7 @@
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
+          <e p="PositionSystem.cs" t="Include" />
           <e p="RailModificators" t="Include">
             <e p="IRailModificator.cs" t="Include" />
             <e p="SpeedBooster.cs" t="Include" />

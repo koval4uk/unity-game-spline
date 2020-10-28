@@ -11,6 +11,6 @@ public class ProgressBarManager : MonoBehaviour
 
     private void Update()
     {
-        bar.fillAmount = (float)follower.result.percent;        
+        //bar.fillAmount = (float)follower.result.percent;        
     }
 }
