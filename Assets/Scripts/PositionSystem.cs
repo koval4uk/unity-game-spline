@@ -23,7 +23,7 @@ public class PositionSystem : MonoBehaviour
 
     private SplineFollower[] SortPlayersByProgress()
     {
-        return _splineFollowers.OrderBy(player => -player.result.percent)
+        return _splineFollowers.OrderBy(player => -player.result.position.z)
             .ToArray();
     }
 
