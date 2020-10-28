@@ -12,6 +12,7 @@ public class EnemyRailwaySwitcher : MonoBehaviour
     private StickmanEvents stickmanEvents;
     private EnemyAnimationEvents enemyAnimationEvents;
     private SplineFollower splineFollower;
+    private SplineProjector splineProjector;
     private SplineComputer[] allRailways;
 
     private int activeRailwayIndex = -1;
@@ -31,6 +32,7 @@ public class EnemyRailwaySwitcher : MonoBehaviour
         stickmanEvents = GetComponent<StickmanEvents>();
         enemyAnimationEvents = GetComponent<EnemyAnimationEvents>();
         splineFollower = GetComponent<SplineFollower>();
+        splineProjector = GetComponent<SplineProjector>();
     }
     
     private void Init()
@@ -75,7 +77,11 @@ public class EnemyRailwaySwitcher : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
 
+        splineProjector.spline = allRailways[activeRailwayIndex];
+        double currentPercent = splineProjector.result.percent;
         splineFollower.spline = allRailways[activeRailwayIndex];
+        splineFollower.SetPercent(currentPercent);
+
         stickmanEvents.OnSwitchRailway(activeRailwayIndex);
     }
 
