@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Numerics;
 using Dreamteck.Splines;
 using TMPro;
@@ -16,27 +17,25 @@ public class PositionSystem : MonoBehaviour
     
     private void Update()
     {
-        var sortedSplineFollowers = sortPlayersByProgress();
-        updatePositionForPlayer(sortedSplineFollowers);
+        var sortedSplineFollowers = SortPlayersByProgress();
+        UpdatePositionForPlayer(sortedSplineFollowers);
     }
 
-    private SplineFollower[] sortPlayersByProgress()
+    private SplineFollower[] SortPlayersByProgress()
     {
         return _splineFollowers.OrderBy(player => -player.result.percent)
             .ToArray();
     }
 
-    private void updatePositionForPlayer(SplineFollower[] sortedSplineFollowers)
+    private static void UpdatePositionForPlayer(SplineFollower[] sortedSplineFollowers)
     {
         BigInteger initNumberInRace = 1;
         
-        sortedSplineFollowers.Select(player =>
+        Array.ForEach(sortedSplineFollowers, splineFollower =>
             {
-                TextMeshPro textMeshPro = player.gameObject.GetComponentInChildren<TextMeshPro>();
+                var textMeshPro = splineFollower.gameObject.GetComponentInChildren<TextMeshPro>();
                 textMeshPro.SetText(initNumberInRace++.ToString());
-                return true;
-            })
-            .ToArray();
+            });
     }
     
 }
