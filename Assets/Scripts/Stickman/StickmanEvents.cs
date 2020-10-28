@@ -30,7 +30,13 @@ public class StickmanEvents : MonoBehaviour
     {
         Debug.Log($"Enable events {gameObject.name}");
         Observer.Instance.OnStartGame += OnMove;
+        OnMove += LogOnMove; // For Testing!
         Observer.Instance.OnStartGame += delegate { StartCoroutine(LogListeners()); };
+    }
+
+    private void LogOnMove()
+    {
+        Debug.Log("On MOVE LOGGING in Events!");
     }
 
     private IEnumerator LogListeners()
