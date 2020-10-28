@@ -16,7 +16,7 @@ public class PositionSystem : MonoBehaviour
 
     private void Update()
     {
-        if (player.result.percent > enemy.result.percent)
+        /*if (player.result.percent > enemy.result.percent)
         {
             playerPositionBoard.SetText(FirstPlace);
             enemyPositionBoard.SetText(SecondPlace);
@@ -25,6 +25,6 @@ public class PositionSystem : MonoBehaviour
         {
             playerPositionBoard.SetText(SecondPlace);
             enemyPositionBoard.SetText(FirstPlace);
-        }
+        }*/
     }
 }
