@@ -8,32 +8,37 @@ using UnityEngine;
 public class PositionSystem : MonoBehaviour
 {
 
-    private SplineFollower[] _splineFollowers;
+    private SplineProjector[] _splineProjectors;
     
     private void Start()
     {
-        _splineFollowers = FindObjectsOfType<SplineFollower>();
+        _splineProjectors = FindObjectsOfType<SplineProjector>();
+        RailwaysManager.Instance.CalculateMainRailway();
     }
     
     private void Update()
     {
-        var sortedSplineFollowers = SortPlayersByProgress();
-        UpdatePositionForPlayer(sortedSplineFollowers);
+        var sortedSplineProjectors = SortPlayersByProgress();
+        UpdatePositionForPlayer(sortedSplineProjectors);
     }
 
-    private SplineFollower[] SortPlayersByProgress()
+    private SplineProjector[] SortPlayersByProgress()
     {
-        return _splineFollowers.OrderBy(player => -player.result.position.z)
+        Array.ForEach(_splineProjectors, splineProjector =>
+            {
+                splineProjector.spline = RailwaysManager.Instance.MainRailway;
+            });
+        return _splineProjectors.OrderBy(player => -player.result.percent)
             .ToArray();
     }
 
-    private static void UpdatePositionForPlayer(SplineFollower[] sortedSplineFollowers)
+    private static void UpdatePositionForPlayer(SplineProjector[] sortedSplineProjectors)
     {
         BigInteger initNumberInRace = 1;
         
-        Array.ForEach(sortedSplineFollowers, splineFollower =>
+        Array.ForEach(sortedSplineProjectors, splineProjector =>
             {
-                var textMeshPro = splineFollower.gameObject.GetComponentInChildren<TextMeshPro>();
+                var textMeshPro = splineProjector.gameObject.GetComponentInChildren<TextMeshPro>();
                 textMeshPro.SetText(initNumberInRace++.ToString());
             });
     }

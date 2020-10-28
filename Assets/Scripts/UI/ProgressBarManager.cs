@@ -9,16 +9,18 @@ using Dreamteck.Splines;
 public class ProgressBarManager : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] private SplineFollower follower;
+    [SerializeField] private SplineProjector projector;
 
     private void Start()
     {
-        follower = FindObjectsOfType<SplineFollower>()
+        RailwaysManager.Instance.CalculateMainRailway();
+        projector = FindObjectsOfType<SplineProjector>()
             .First(c => c.name.Equals("Player"));
     }
     
     private void Update()
     {
-        bar.fillAmount = Convert.ToSingle(follower.result.percent);        
+        projector.spline = RailwaysManager.Instance.MainRailway;
+        bar.fillAmount = Convert.ToSingle(projector.result.percent);        
     }
 }

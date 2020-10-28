@@ -7,6 +7,7 @@ using DG.Tweening;
 
 public class PlayerRailwaySwitcher : MonoBehaviour
 {
+    private SplineProjector splineProjector;
     private SplineFollower splineFollower;
     private SplineComputer activeRailway;
 
@@ -18,6 +19,7 @@ public class PlayerRailwaySwitcher : MonoBehaviour
     private void CacheComponents()
     {
         splineFollower = GetComponent<SplineFollower>();
+        splineProjector = GetComponent<SplineProjector>();
     }
 
     private void OnEnable()
@@ -37,6 +39,9 @@ public class PlayerRailwaySwitcher : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
 
+        splineProjector.spline = activeRailway;
+        double currentPercent = splineProjector.result.percent;
         splineFollower.spline = activeRailway;
+        splineFollower.SetPercent(currentPercent);
     }
 }
