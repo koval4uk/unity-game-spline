@@ -17,7 +17,9 @@ public class RailwaysManager : Singleton<RailwaysManager>
     public SplineComputer[] AllRailways => allRailways;
 
     private int activeRailwayIndex = (int) Railways.Middle; //Start railway
-    public int ActimeRailwayIndex => activeRailwayIndex;
+    public int ActiveRailwayIndex => activeRailwayIndex;
+    private SplineComputer mainRailway;
+    public SplineComputer MainRailway => mainRailway;
 
     public SplineComputer GetActiveRailway(SwipeData swipeData)
     {
@@ -33,6 +35,17 @@ public class RailwaysManager : Singleton<RailwaysManager>
                 break;
         }
         return allRailways[activeRailwayIndex];
+    }    
+
+    public SplineComputer CalculateMainRailway()
+    {
+        mainRailway = allRailways[0];
+        foreach(var railway in allRailways)
+        {
+            if (railway.CalculateLength() > mainRailway.CalculateLength())
+                mainRailway = railway;
+        }
+
+        return mainRailway;
     }
-    
 }
