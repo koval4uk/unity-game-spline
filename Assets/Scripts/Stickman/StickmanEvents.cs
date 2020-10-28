@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StickmanEvents : MonoBehaviour
 {
-    public Action OnMove = delegate { Debug.Log("OnMove on Triggered!" ); };
+    public Action OnMove = delegate { Debug.Log("OnMove Triggered!" ); };
     public Action<float> OnChangeSpeed = delegate { Debug.Log("OnChangeSpeed Triggered!"); };
     public Action<float> OnMultiplySpeed = delegate { Debug.Log("OnMultiplySpeed Triggered!"); };
     public Action OnSetInitialSpeed = delegate { Debug.Log("OnSetInitialSpeed Triggered!"); };
@@ -30,7 +30,13 @@ public class StickmanEvents : MonoBehaviour
     {
         Debug.Log($"Enable events {gameObject.name}");
         Observer.Instance.OnStartGame += OnMove;
+        OnMove += LogOnMove; // For Testing!
         Observer.Instance.OnStartGame += delegate { StartCoroutine(LogListeners()); };
+    }
+
+    private void LogOnMove()
+    {
+        Debug.Log("On MOVE LOGGING in Events!");
     }
 
     private IEnumerator LogListeners()
