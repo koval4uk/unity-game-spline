@@ -16,24 +16,24 @@ public class PositionSystem : MonoBehaviour
     
     private void Update()
     {
-        BigInteger numberInRace = 1;
         var sortedSplineFollowers = sortPlayersByProgress();
-        updatePositionForPlayer(sortedSplineFollowers, numberInRace);
+        updatePositionForPlayer(sortedSplineFollowers);
     }
 
     private SplineFollower[] sortPlayersByProgress()
     {
-        return _splineFollowers.OrderBy(splineFollower => -splineFollower.result.percent)
+        return _splineFollowers.OrderBy(player => -player.result.percent)
             .ToArray();
     }
 
-    private void updatePositionForPlayer(SplineFollower[] sortedSplineFollowers, BigInteger numberInRace)
+    private void updatePositionForPlayer(SplineFollower[] sortedSplineFollowers)
     {
-        sortedSplineFollowers
-            .Select(player =>
+        BigInteger initNumberInRace = 1;
+        
+        sortedSplineFollowers.Select(player =>
             {
                 TextMeshPro textMeshPro = player.gameObject.GetComponentInChildren<TextMeshPro>();
-                textMeshPro.SetText(numberInRace++.ToString());
+                textMeshPro.SetText(initNumberInRace++.ToString());
                 return true;
             })
             .ToArray();
