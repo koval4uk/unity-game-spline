@@ -8,12 +8,10 @@ public class PositionSystem : MonoBehaviour
 {
 
     private SplineFollower[] _splineFollowers;
-
     
     private void Start()
     {
         _splineFollowers = FindObjectsOfType<SplineFollower>();
-        //  FindObjectsOfType<SplineFollower>()[1].gameObject.GetComponentInChildren<TextMeshPro>()
     }
     
     private void Update()
@@ -21,6 +19,12 @@ public class PositionSystem : MonoBehaviour
         BigInteger numberInRace = 1;
         var sortedSplineFollowers = sortPlayersByProgress();
         updatePositionForPlayer(sortedSplineFollowers, numberInRace);
+    }
+
+    private SplineFollower[] sortPlayersByProgress()
+    {
+        return _splineFollowers.OrderBy(splineFollower => -splineFollower.result.percent)
+            .ToArray();
     }
 
     private void updatePositionForPlayer(SplineFollower[] sortedSplineFollowers, BigInteger numberInRace)
@@ -34,10 +38,5 @@ public class PositionSystem : MonoBehaviour
             })
             .ToArray();
     }
-
-    private SplineFollower[] sortPlayersByProgress()
-    {
-        return _splineFollowers.OrderBy(splineFollower => -splineFollower.result.percent)
-                .ToArray();
-    }
+    
 }
