@@ -487,6 +487,8 @@
             <e p="Wall.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="PlayerAnimation.cs" t="Include" />
+            <e p="PlayerAnimationEvents.cs" t="Include" />
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
