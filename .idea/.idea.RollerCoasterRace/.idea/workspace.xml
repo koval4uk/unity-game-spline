@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +144,7 @@
       <workItem from="1603615331596" duration="3354000" />
       <workItem from="1603695405696" duration="4937000" />
       <workItem from="1603786341232" duration="7885000" />
-      <workItem from="1603879587830" duration="5441000" />
+      <workItem from="1603879587830" duration="7680000" />
     </task>
     <servers />
   </component>
