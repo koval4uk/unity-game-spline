@@ -29,18 +29,13 @@ public class StickmanEvents : MonoBehaviour
     private void OnEnable()
     {
         Debug.Log($"Enable events {gameObject.name}");
+        Observer.Instance.OnLevelManagerLoaded += SubscribeEvents;
+    }
+
+    private void SubscribeEvents(int empty)
+    {
+        Debug.Log("Subscribe Events");
         Observer.Instance.OnStartGame += OnMove;
-        OnMove += LogOnMove; // For Testing!
-        Observer.Instance.OnStartGame += delegate { StartCoroutine(LogListeners()); };
     }
-
-    private void LogOnMove()
-    {
-        Debug.Log("On MOVE LOGGING in Events!");
-    }
-
-    private IEnumerator LogListeners()
-    {
-        yield return new WaitForSeconds(0.1f);
-    }
+    
 }

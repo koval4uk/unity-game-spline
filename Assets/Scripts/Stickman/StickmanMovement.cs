@@ -16,6 +16,7 @@ public class StickmanMovement : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log("<color=red>Awake Stickman Movement!</color>");
         CacheComponents();
         Init();
     }
