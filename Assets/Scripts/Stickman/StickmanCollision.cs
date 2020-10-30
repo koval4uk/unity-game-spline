@@ -21,7 +21,6 @@ public class StickmanCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"Collision with {other.gameObject.name}");
         if (other.gameObject.CompareTag(GameConstants.TagPlayer))
         {
             if(other.contacts[0].normal == Vector3.forward)
@@ -48,7 +47,7 @@ public class StickmanCollision : MonoBehaviour
         Debug.Log($"Trigger with {other.gameObject.name}");
         if (other.CompareTag(GameConstants.TagObstacle))
         {
-            Debug.Log("stickmanEvents = " + stickmanEvents);
+            Debug.Log("Trigger with Wall!");
             other.GetComponent<IObstacle>().Initiate(stickmanEvents);
         }
         
