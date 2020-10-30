@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warpEffect: {fileID: 0}
-  model: {fileID: 0}
+  model: {fileID: 8296172669153488417}
 --- !u!65 &1114671102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -224,6 +224,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dcbaeb137c65d44699ccc1e73760e39, type: 3}
+--- !u!1 &8296172669153488417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7dcbaeb137c65d44699ccc1e73760e39,
+    type: 3}
+  m_PrefabInstance: {fileID: 37615400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5006512734840577074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7dcbaeb137c65d44699ccc1e73760e39,

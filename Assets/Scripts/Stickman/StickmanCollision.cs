@@ -48,6 +48,7 @@ public class StickmanCollision : MonoBehaviour
         Debug.Log($"Trigger with {other.gameObject.name}");
         if (other.CompareTag(GameConstants.TagObstacle))
         {
+            Debug.Log("stickmanEvents = " + stickmanEvents);
             other.GetComponent<IObstacle>().Initiate(stickmanEvents);
         }
         
