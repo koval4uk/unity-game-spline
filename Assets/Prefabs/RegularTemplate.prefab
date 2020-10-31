@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
+  m_BindingMode: 3
   m_FollowOffset: {x: 0, y: 5.69, z: -12.801942}
   m_XDamping: 1
   m_YDamping: 1
@@ -997,7 +997,7 @@ PrefabInstance:
     - target: {fileID: 7056256263243152795, guid: 307a0479a7053984d8f77efe38e26cef,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.724701
+      value: -5.7246704
       objectReference: {fileID: 0}
     - target: {fileID: 7122191236787564018, guid: 307a0479a7053984d8f77efe38e26cef,
         type: 3}
