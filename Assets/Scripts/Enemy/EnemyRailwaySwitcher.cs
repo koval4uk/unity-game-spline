@@ -79,8 +79,11 @@ public class EnemyRailwaySwitcher : MonoBehaviour
 
         splineProjector.spline = allRailways[activeRailwayIndex];
         double currentPercent = splineProjector.result.percent;
+
+        splineFollower.motion.applyPosition = false;
         splineFollower.spline = allRailways[activeRailwayIndex];
         splineFollower.SetPercent(currentPercent);
+        splineFollower.motion.applyPosition = true;
 
         stickmanEvents.OnSwitchRailway(activeRailwayIndex);
     }

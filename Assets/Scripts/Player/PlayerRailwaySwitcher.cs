@@ -11,6 +11,10 @@ public class PlayerRailwaySwitcher : MonoBehaviour
     private SplineFollower splineFollower;
     private SplineComputer activeRailway;
 
+    private double currentPercent;
+    private Vector3 currentPosition;
+    private bool needSwitch;
+
     private void Awake()
     {
         CacheComponents();
@@ -30,18 +34,23 @@ public class PlayerRailwaySwitcher : MonoBehaviour
     private void SwitchRailway(SwipeData swipeData)
     {
         activeRailway = RailwaysManager.Instance.GetActiveRailway(swipeData);
-        transform.DOMoveX(activeRailway.transform.position.x, GameConstants.SwitchRailwayTime);
-
-        StartCoroutine(WaitAndSwitch());
-    }
-
-    private IEnumerator WaitAndSwitch()
-    {
-        yield return new WaitForSeconds(0.1f);
 
         splineProjector.spline = activeRailway;
-        double currentPercent = splineProjector.result.percent;
+        currentPercent = splineProjector.result.percent;
+        currentPosition = splineProjector.spline.EvaluatePosition(currentPercent);
+
+        transform.DOMoveX(currentPosition.x, GameConstants.SwitchRailwayTime).OnComplete(Switch);
+    }
+
+    private void Switch()
+    {
+        currentPercent = splineProjector.result.percent;
+
+        splineFollower.motion.applyPosition = false;
+
         splineFollower.spline = activeRailway;
         splineFollower.SetPercent(currentPercent);
+
+        splineFollower.motion.applyPosition = true;
     }
 }
