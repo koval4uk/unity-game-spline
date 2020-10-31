@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Nitro : MonoBehaviour, IModificator
 {
-    [SerializeField] private ParticleSystem warpEffect;
     [SerializeField] private GameObject model;
+    private ParticleSystem warpEffect;
+
+    private void Start()
+    {
+        warpEffect = EffectsHolder.Instance.warpVFX.GetComponent<ParticleSystem>();
+    }
 
     public void Trigger(StickmanEvents stickmanEvents)
     {
@@ -17,6 +23,8 @@ public class Nitro : MonoBehaviour, IModificator
     {
         stickmanEvents.OnMultiplySpeed(GameConstants.nitroMultiplier);
         stickmanEvents.OnNitroAnimation();
+        warpEffect.Stop();
+
         if (stickmanEvents.IsPlayer)
             warpEffect.Play();
         

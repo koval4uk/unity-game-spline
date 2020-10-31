@@ -24,7 +24,6 @@ public class StickmanMovement : MonoBehaviour
     private void OnEnable()
     {
         Debug.Log("<color=red>Enable Stickman Movement</color>");
-        Debug.Log("<color=red>events = </color>" + events);
         events.OnMove += StartMove;
         events.OnChangeSpeed += SetSpeed;
         events.OnMultiplySpeed += SetSpeedMultiplier;
@@ -51,11 +50,9 @@ public class StickmanMovement : MonoBehaviour
 
     private IEnumerator IncreaseSpeed()
     {
-        //Debug.Log("Increase Speed Start!");
         yield return new WaitForSeconds(0.1f);
         while (GameStarter.IsGameStarted)
         {
-            //Debug.Log("<color=red> Increase Speed Loop !</color>");
             yield return new WaitForSeconds(0.1f);
             startMovementSpeed += increaseSpeedStep;
             if (startMovementSpeed > limitMovementSpeed)

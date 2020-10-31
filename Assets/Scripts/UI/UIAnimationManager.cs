@@ -12,7 +12,7 @@ public class UIAnimationManager : MonoBehaviour
     private StimulationText stimulText;
 
     [SerializeField] private UIManager uiManager;
-    [SerializeField] private UIEffectsHolder uiEffectsHolder;
+    [SerializeField] private EffectsHolder effectsHolder;
 
     private void OnEnable()
 	{
@@ -36,9 +36,9 @@ public class UIAnimationManager : MonoBehaviour
 
     private void CacheVFX()
     {
-        confettiVFX = uiEffectsHolder.confettiVFX;
-        fireworkVFX = uiEffectsHolder.fireworkVFX;
-        stimulText = uiEffectsHolder.stimulText.GetComponentInChildren<StimulationText>();
+        confettiVFX = effectsHolder.confettiVFX;
+        fireworkVFX = effectsHolder.fireworkVFX;
+        stimulText = effectsHolder.stimulText.GetComponentInChildren<StimulationText>();
     }
 
     private void ShowMainMenu()
