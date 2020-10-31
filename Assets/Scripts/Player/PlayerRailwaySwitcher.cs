@@ -9,11 +9,12 @@ public class PlayerRailwaySwitcher : MonoBehaviour
 {
     private SplineProjector splineProjector;
     private SplineFollower splineFollower;
-    private SplineComputer activeRailway;
+    private SplineComputer newRailway;
 
+    private int activeRailwayIndex = (int)Railways.Middle;
+    private int newRailwayIndex = (int)Railways.Middle;
     private double currentPercent;
     private Vector3 currentPosition;
-    private bool needSwitch;
 
     private void Awake()
     {
@@ -33,10 +34,16 @@ public class PlayerRailwaySwitcher : MonoBehaviour
 
     private void SwitchRailway(SwipeData swipeData)
     {
-        activeRailway = RailwaysManager.Instance.GetActiveRailway(swipeData);
+        newRailway = RailwaysManager.Instance.GetNewRailway(swipeData, ref newRailwayIndex);
 
-        splineProjector.spline = activeRailway;
+        splineProjector.spline = newRailway;
         currentPercent = splineProjector.result.percent;
+        if (!RailwaysManager.Instance.IsSwitchValid(currentPercent))
+        {
+            newRailwayIndex = activeRailwayIndex;
+            return;
+        }
+        activeRailwayIndex = newRailwayIndex;
         currentPosition = splineProjector.spline.EvaluatePosition(currentPercent);
 
         transform.DOMoveX(currentPosition.x, GameConstants.SwitchRailwayTime).OnComplete(Switch);
@@ -47,10 +54,8 @@ public class PlayerRailwaySwitcher : MonoBehaviour
         currentPercent = splineProjector.result.percent;
 
         splineFollower.motion.applyPosition = false;
-
-        splineFollower.spline = activeRailway;
+        splineFollower.spline = newRailway;
         splineFollower.SetPercent(currentPercent);
-
         splineFollower.motion.applyPosition = true;
     }
 }

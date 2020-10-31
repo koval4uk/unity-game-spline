@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Numerics;
 using Dreamteck.Splines;
 using TMPro;
 using UnityEngine;
@@ -36,7 +35,7 @@ public class PositionSystem : MonoBehaviour
 
     private static void UpdatePositionForPlayer(SplineProjector[] sortedSplineProjectors)
     {
-        BigInteger initNumberInRace = 1;
+        int initNumberInRace = 1;
         
         Array.ForEach(sortedSplineProjectors, splineProjector =>
             {
