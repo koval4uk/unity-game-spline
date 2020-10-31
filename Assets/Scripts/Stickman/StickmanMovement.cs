@@ -62,7 +62,7 @@ public class StickmanMovement : MonoBehaviour
             UpdateSpeed();
         }
 
-        //Debug.Log("<color=red>End Increase speed!</color>");
+        Debug.Log("<color=red>End Increase speed!</color>");
     }    
 
     private void SetSpeed(float speed)

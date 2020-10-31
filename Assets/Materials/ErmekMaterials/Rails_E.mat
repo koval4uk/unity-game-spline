@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rails_E
-  m_Shader: {fileID: 4800000, guid: eda2062582e1e7c489ce8cf0b2fb9509, type: 3}
+  m_Shader: {fileID: 4800000, guid: 80a5fc87b0ada8740998e39c519ce2d9, type: 3}
   m_ShaderKeywords: _RECEIVE_SHADOWS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -69,18 +69,21 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
-    - _RampSmoothing: 1
-    - _RampSmoothingOtherLights: 0.574
-    - _RampThreshold: 0.146
-    - _RampThresholdOtherLights: 0.489
+    - _RampSmoothing: 0.864
+    - _RampSmoothingOtherLights: 0.46
+    - _RampThreshold: 0.174
+    - _RampThresholdOtherLights: 0.495
     - _ReceiveShadows: 1
     - _ReceiveShadowsOff: 0
+    - _RimMax: 1
+    - _RimMin: 0.5
     - _Shadow_HSV_H: 0
     - _Shadow_HSV_S: 0
     - _Shadow_HSV_V: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularSmoothness: 0.2
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
@@ -93,8 +96,10 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5}
+    - _SColor: {r: 0.5849056, g: 0.54903877, b: 0.54903877, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _VColorBlendOffset: {r: 0, g: 0, b: 0, a: 0}
     - _VColorBlendSmooth: {r: 0.25, g: 0.25, b: 0.25, a: 0.25}
 --- !u!114 &3182844559001762295

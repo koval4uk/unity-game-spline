@@ -46,11 +46,14 @@ public class PlayerRailwaySwitcher : MonoBehaviour
         activeRailwayIndex = newRailwayIndex;
         currentPosition = splineProjector.spline.EvaluatePosition(currentPercent);
 
-        transform.DOMoveX(currentPosition.x, GameConstants.SwitchRailwayTime).OnComplete(Switch);
+        transform.DOMoveX(currentPosition.x, GameConstants.SwitchRailwayTime);
+
+        StartCoroutine(Switch());
     }
 
-    private void Switch()
+    private IEnumerator Switch()
     {
+        yield return new WaitForSeconds(0.1f);
         currentPercent = splineProjector.result.percent;
 
         splineFollower.motion.applyPosition = false;
