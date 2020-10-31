@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Numerics;
 using Dreamteck.Splines;
 using TMPro;
 using UnityEngine;
@@ -12,8 +11,9 @@ public class PositionSystem : MonoBehaviour
     
     private void Start()
     {
-        _splineProjectors = FindObjectsOfType<SplineProjector>();
-        RailwaysManager.Instance.CalculateMainRailway();
+        _splineProjectors = FindObjectsOfType<SplineProjector>()
+            .Where(c => c.CompareTag(GameConstants.TagMainProjector))
+            .ToArray();
     }
     
     private void Update()
@@ -28,13 +28,14 @@ public class PositionSystem : MonoBehaviour
             {
                 splineProjector.spline = RailwaysManager.Instance.MainRailway;
             });
-        return _splineProjectors.OrderBy(player => -player.result.percent)
+        return _splineProjectors
+            .OrderBy(player => -player.result.percent)
             .ToArray();
     }
 
     private static void UpdatePositionForPlayer(SplineProjector[] sortedSplineProjectors)
     {
-        BigInteger initNumberInRace = 1;
+        int initNumberInRace = 1;
         
         Array.ForEach(sortedSplineProjectors, splineProjector =>
             {

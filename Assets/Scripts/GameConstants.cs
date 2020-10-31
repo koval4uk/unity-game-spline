@@ -10,6 +10,7 @@ public class GameConstants : MonoBehaviour
     public const string TagModificator = "Modificator";
     public const string TagPlayer = "Player";
     public const string TagFinish = "Finish";
+    public const string TagMainProjector = "MainProjector";
 
     public const float PlayerStartMovementSpeed = 2.0f;
     public const float PlayerLimitMovementSpeed = 28.0f;

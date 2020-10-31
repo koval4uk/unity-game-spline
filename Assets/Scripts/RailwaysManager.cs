@@ -16,26 +16,24 @@ public class RailwaysManager : Singleton<RailwaysManager>
     [SerializeField] private SplineComputer[] allRailways;
     public SplineComputer[] AllRailways => allRailways;
 
-    private int activeRailwayIndex = (int) Railways.Middle; //Start railway
-    public int ActiveRailwayIndex => activeRailwayIndex;
     private SplineComputer mainRailway;
     public SplineComputer MainRailway => mainRailway;
 
-    public SplineComputer GetActiveRailway(SwipeData swipeData)
+    public SplineComputer GetNewRailway(SwipeData swipeData, ref int activeIndex)
     {
         switch (swipeData.Direction)
         {
             case SwipeDirection.Left:
-                if (activeRailwayIndex > 0)
-                    activeRailwayIndex--;
+                if (activeIndex > 0)
+                    activeIndex--;
                 break;
             case SwipeDirection.Right:
-                if (activeRailwayIndex < 2)
-                    activeRailwayIndex++;
+                if (activeIndex < 2)
+                    activeIndex++;
                 break;
         }
-        return allRailways[activeRailwayIndex];
-    }    
+        return allRailways[activeIndex];
+    }
 
     public SplineComputer CalculateMainRailway()
     {
@@ -47,5 +45,10 @@ public class RailwaysManager : Singleton<RailwaysManager>
         }
 
         return mainRailway;
+    }
+
+    public bool IsSwitchValid(double newPercent)
+    {
+        return (newPercent > 0 && newPercent < 1);
     }
 }

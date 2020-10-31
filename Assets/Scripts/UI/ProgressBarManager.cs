@@ -13,9 +13,8 @@ public class ProgressBarManager : MonoBehaviour
 
     private void Start()
     {
-        RailwaysManager.Instance.CalculateMainRailway();
         projector = FindObjectsOfType<SplineProjector>()
-            .First(c => c.name.Equals("Player"));
+            .First(c => c.name.Equals("PlayerPosition") && c.CompareTag(GameConstants.TagMainProjector));
     }
     
     private void Update()
