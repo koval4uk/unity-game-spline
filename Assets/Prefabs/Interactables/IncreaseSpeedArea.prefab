@@ -177,6 +177,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.333333
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
       propertyPath: m_Name
@@ -266,6 +271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.333333
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
@@ -357,6 +367,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.333333
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
       propertyPath: m_Name
@@ -446,6 +461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.333333
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
@@ -537,6 +557,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.333333
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
       propertyPath: m_Name
@@ -626,6 +651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.333333
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
@@ -717,6 +747,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.333333
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
       propertyPath: m_Name
@@ -806,6 +841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.333333
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
@@ -897,6 +937,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.333333
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
       propertyPath: m_Name
@@ -987,6 +1032,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.333333
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
       propertyPath: m_Name
@@ -1076,6 +1126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.333333
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d1004a0a98497b1448f68b2b81b3ab1d,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: d1004a0a98497b1448f68b2b81b3ab1d,
         type: 3}
