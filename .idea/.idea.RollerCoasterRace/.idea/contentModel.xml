@@ -780,7 +780,6 @@
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
-          <e p="PositionSystem.cs" t="Include" />
           <e p="RailModificators" t="Include">
             <e p="IRailModificator.cs" t="Include" />
             <e p="SpeedBooster.cs" t="Include" />
@@ -798,6 +797,10 @@
           <e p="Swipe" t="Include">
             <e p="SwipeDetector.cs" t="Include" />
             <e p="SwipeLogger.cs" t="Include" />
+          </e>
+          <e p="system" t="Include">
+            <e p="DeathSystem.cs" t="Include" />
+            <e p="PositionSystem.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="EffectsHolder.cs" t="Include" />
