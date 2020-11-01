@@ -29,7 +29,7 @@ public class DebugTools : MonoBehaviour
 
     public void TestMethod()
     {
-
+        // added new logic
     }
 
 }
