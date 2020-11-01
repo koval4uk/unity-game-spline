@@ -28,6 +28,7 @@ public class PositionSystem : MonoBehaviour
             {
                 splineProjector.spline = RailwaysManager.Instance.MainRailway;
             });
+        
         return _splineProjectors
             .OrderBy(player => -player.result.percent)
             .ToArray();
