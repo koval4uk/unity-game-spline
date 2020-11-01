@@ -19,11 +19,18 @@ public class DebugTools : MonoBehaviour
     {
         PlayerPrefs.DeleteKey(GameConstants.PrefsCurrentLevel);
     }
+
     
     [ContextMenu("Set level data")]
     private void SetLevelData()
     {
         PlayerPrefs.SetInt(GameConstants.PrefsCurrentLevel, levelNumberToSet);
+    }
+
+    public void TestMethod()
+    {
+        // added new logic
+        // true logic
     }
 
 }
