@@ -18,7 +18,7 @@ public class DeathSystem : MonoBehaviour
     
     private void Update()
     {
-        var sortedSplineFollowers = SortPlayersByProgress();
+        var sortedSplineFollowers = FindFinishSplinePlayers();
 
         if (sortedSplineFollowers.Length != 0)
         {
@@ -26,7 +26,7 @@ public class DeathSystem : MonoBehaviour
         }
     }
 
-    private SplineFollower[] SortPlayersByProgress()
+    private SplineFollower[] FindFinishSplinePlayers()
     {
         return _splineFollowers.Where(player => player.result.percent - 1 >= 0)
             .ToArray();
