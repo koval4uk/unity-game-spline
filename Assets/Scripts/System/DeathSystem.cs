@@ -1,29 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
+﻿using System.Linq;
 using Dreamteck.Splines;
-using TMPro;
 using UnityEngine;
 
 public class DeathSystem : MonoBehaviour
 {
     private SplineFollower[] _splineFollowers;
-    
+
     private void Start()
     {
         _splineFollowers = FindObjectsOfType<SplineFollower>();
     }
-    
+
     private void Update()
     {
         var sortedSplineFollowers = FindFinishSplinePlayers();
 
-        if (sortedSplineFollowers.Length != 0)
-        {
-            DeathPlayer(sortedSplineFollowers);
-        }
+        if (sortedSplineFollowers.Length != 0) DeathPlayer(sortedSplineFollowers);
     }
 
     private SplineFollower[] FindFinishSplinePlayers()
@@ -34,19 +26,10 @@ public class DeathSystem : MonoBehaviour
 
     private static void DeathPlayer(SplineFollower[] sortedSplineFollowers)
     {
-        foreach (SplineFollower splineFollower in sortedSplineFollowers)
-        {
+        foreach (var splineFollower in sortedSplineFollowers)
             if (splineFollower.name.Equals(GameConstants.TagPlayer))
-            {
-                Observer.Instance.CallOnLoseLevel(); 
-            }
+                Observer.Instance.CallOnLoseLevel();
             else
-            {
                 splineFollower.gameObject.SetActive(false);
-            }
-
-        }
-        
     }
-    
 }
