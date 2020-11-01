@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1114671102}
   m_Layer: 0
   m_Name: Nitro
-  m_TagString: Obstacle
+  m_TagString: Modificator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbf55e4b5bcac143ab80822d2f907ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpEffect: {fileID: 0}
   model: {fileID: 8296172669153488417}
 --- !u!65 &1114671102
 BoxCollider:
