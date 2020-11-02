@@ -14,7 +14,9 @@ public class GameConstants : MonoBehaviour
 
     public const float PlayerStartMovementSpeed = 2.0f;
     public const float PlayerLimitMovementSpeed = 28.0f;
-    public const float PlayerIncreaseSpeedStep = .45f;
+    public const float PlayerIncreaseSpeed = 1.5f;
+    public const float PlayerDecreaseSpeed = -2.2f;
+    public const float PlayerMinSpeed = 7.0f;
 
     public const float nitroMultiplier = 1.5f;
     public const float nitroTime = 2.5f;

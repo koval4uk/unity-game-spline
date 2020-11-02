@@ -309,6 +309,38 @@
               <e p="TransformModuleEditor.cs" t="Include" />
               <e p="WelcomeScreen.cs" t="Include" />
             </e>
+            <e p="Examples" t="Include">
+              <e p="AudioVisualization" t="Include">
+                <e p="SpectrumVisualizer.cs" t="Include" />
+              </e>
+              <e p="Following" t="Include">
+                <e p="Instructions.txt" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="CameraSmoothRotation.cs" t="Include" />
+                  <e p="URLButton.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Junctions" t="Include">
+                <e p="Instructions.txt" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="JunctionSwitch.cs" t="Include" />
+                  <e p="TrainCamera.cs" t="Include" />
+                  <e p="TrainEngine.cs" t="Include" />
+                  <e p="Wagon.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LengthEvents" t="Include">
+                <e p="SetMaterialColor.cs" t="Include" />
+              </e>
+              <e p="Projection" t="Include">
+                <e p="Instructions.txt" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="AddForceAlongPath.cs" t="Include" />
+                  <e p="BallCamera.cs" t="Include" />
+                  <e p="LapCounter.cs" t="Include" />
+                </e>
+              </e>
+            </e>
           </e>
           <e p="Utilities" t="Include">
             <e p="ArrayUtility.cs" t="Include" />

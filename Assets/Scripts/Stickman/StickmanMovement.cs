@@ -7,23 +7,26 @@ using UnityEngine;
 public class StickmanMovement : MonoBehaviour
 {
     [SerializeField] private float startMovementSpeed;
+    private float currentMovementSpeed;
     [SerializeField] private float limitMovementSpeed;
-    [SerializeField] private float increaseSpeedStep;
+    [SerializeField] private float forwardSpeedStep;
     
     private StickmanEvents events;
     private SplineFollower follower;
     private float speedMultiplier = 1f;
+    private float lastHeight;
+    private float speedIncrease = GameConstants.PlayerIncreaseSpeed;
+    private float speedDecrease = GameConstants.PlayerDecreaseSpeed;
+    private float threshold = 0.1f;
 
     private void Awake()
     {
-        Debug.Log("<color=red>Awake Stickman Movement!</color>");
         CacheComponents();
         Init();
     }
 
     private void OnEnable()
     {
-        Debug.Log("<color=red>Enable Stickman Movement</color>");
         events.OnMove += StartMove;
         events.OnChangeSpeed += SetSpeed;
         events.OnMultiplySpeed += SetSpeedMultiplier;
@@ -39,6 +42,8 @@ public class StickmanMovement : MonoBehaviour
     {
         follower.follow = false;
         follower.followSpeed = startMovementSpeed;
+        currentMovementSpeed = startMovementSpeed;
+        lastHeight = transform.position.y;
     }
 
     private void StartMove()
@@ -54,20 +59,23 @@ public class StickmanMovement : MonoBehaviour
         while (GameStarter.IsGameStarted)
         {
             yield return new WaitForSeconds(0.1f);
-            startMovementSpeed += increaseSpeedStep;
-            if (startMovementSpeed > limitMovementSpeed)
+            float extraSpeed = forwardSpeedStep + GetHeightSpeed();
+            currentMovementSpeed += extraSpeed;
+            if (currentMovementSpeed > limitMovementSpeed)
             {
-                startMovementSpeed = limitMovementSpeed;
+                currentMovementSpeed = limitMovementSpeed;
+            }
+            else if (currentMovementSpeed < GameConstants.PlayerMinSpeed)
+            {
+                currentMovementSpeed = GameConstants.PlayerMinSpeed;
             }
             UpdateSpeed();
         }
-
-        Debug.Log("<color=red>End Increase speed!</color>");
     }    
 
     private void SetSpeed(float speed)
     {
-        startMovementSpeed = speed;
+        currentMovementSpeed = speed;
         UpdateSpeed();
     }
 
@@ -79,7 +87,23 @@ public class StickmanMovement : MonoBehaviour
 
     private void UpdateSpeed()
     {
-        // test
-        follower.followSpeed = startMovementSpeed * speedMultiplier;
+        follower.followSpeed = currentMovementSpeed * speedMultiplier;
+    }
+
+    private float GetHeightSpeed()
+    {
+        if (Mathf.Abs(lastHeight - transform.position.y) < threshold)
+            return 0;
+        
+        if (lastHeight > transform.position.y)
+        {
+            Debug.Log("<color=red>Increase Speed!</color>");
+            lastHeight = transform.position.y;
+            return speedIncrease;
+        }
+
+        Debug.Log("<color=red>Decrease Speed!</color>");
+        lastHeight = transform.position.y;
+        return speedDecrease;
     }
 }
