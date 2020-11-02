@@ -37,6 +37,7 @@ public class PlayerRailwaySwitcher : MonoBehaviour
         newRailway = RailwaysManager.Instance.GetNewRailway(swipeData, ref newRailwayIndex);
 
         splineProjector.spline = newRailway;
+        Debug.Log($"<color=red>currentPercent = {splineProjector.result.percent} </color>");
         currentPercent = splineProjector.result.percent;
         if (!RailwaysManager.Instance.IsSwitchValid(currentPercent))
         {
@@ -45,7 +46,11 @@ public class PlayerRailwaySwitcher : MonoBehaviour
         }
         activeRailwayIndex = newRailwayIndex;
         currentPosition = splineProjector.spline.EvaluatePosition(currentPercent);
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.position = currentPosition;
+        cube.transform.rotation = Quaternion.identity;
 
+        splineFollower.spline = null;
         transform.DOMoveX(currentPosition.x, GameConstants.SwitchRailwayTime);
 
         StartCoroutine(Switch());
@@ -53,12 +58,12 @@ public class PlayerRailwaySwitcher : MonoBehaviour
 
     private IEnumerator Switch()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.01f);
         currentPercent = splineProjector.result.percent;
 
-        splineFollower.motion.applyPosition = false;
+        //splineFollower.motion.applyPosition = false;
         splineFollower.spline = newRailway;
         splineFollower.SetPercent(currentPercent);
-        splineFollower.motion.applyPosition = true;
+        //splineFollower.motion.applyPosition = true;
     }
 }

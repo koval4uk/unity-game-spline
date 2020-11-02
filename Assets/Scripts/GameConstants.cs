@@ -21,5 +21,5 @@ public class GameConstants : MonoBehaviour
     
     public const int ChanceToDodge = 100;
     public const float DodgeCooldown = .1f;
-    public const float SwitchRailwayTime = 0.5f;
+    public const float SwitchRailwayTime = 0.15f;
 }

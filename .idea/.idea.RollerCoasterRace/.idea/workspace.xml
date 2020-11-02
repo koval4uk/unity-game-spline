@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Finish.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Finish.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/RailTest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/RailTest.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Rails.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Rails.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_002.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002.unity.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRailwaySwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRailwaySwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Dreamteck/Splines/Components/ObjectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Other/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Dreamteck/Splines/Components/SplineTracer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,7 +73,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Swipe/SwipeDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RailwaysHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/IObstacle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollision.cs" />
@@ -101,7 +90,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Nitro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/IModificator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" />
@@ -109,13 +97,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PositionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EffectsHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DebugTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRailwaySwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
       </list>
     </option>
   </component>
@@ -174,7 +164,7 @@
       <workItem from="1604130927819" duration="1432000" />
       <workItem from="1604202504224" duration="622000" />
       <workItem from="1604248875889" duration="1236000" />
-      <workItem from="1604295693334" duration="5865000" />
+      <workItem from="1604295693334" duration="9807000" />
     </task>
     <servers />
   </component>

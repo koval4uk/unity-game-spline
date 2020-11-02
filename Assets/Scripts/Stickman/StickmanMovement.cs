@@ -79,6 +79,7 @@ public class StickmanMovement : MonoBehaviour
 
     private void UpdateSpeed()
     {
+        // test
         follower.followSpeed = startMovementSpeed * speedMultiplier;
     }
 }
