@@ -17,7 +17,11 @@ public class PlayerAnimation : MonoBehaviour
 
     private void OnEnable()
     {
-        animationEvents.OnRailwayEnd += FallDown;
+        animationEvents.OnRailwayEnd += delegate
+        {
+            FallDown();
+            Invoke("CallOnLoseLevel", 1f);
+        };
     }
 
     private void FallDown()
@@ -25,5 +29,10 @@ public class PlayerAnimation : MonoBehaviour
         follower.follow = false;
         transform.DOMoveY(-5f, 0.5f);
         transform.DORotate(new Vector3(90f, 0f, 0f), 0.5f);
+    }
+
+    private void CallOnLoseLevel()
+    {
+        Observer.Instance.CallOnLoseLevel();
     }
 }
