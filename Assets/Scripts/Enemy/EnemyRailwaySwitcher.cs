@@ -41,10 +41,10 @@ public class EnemyRailwaySwitcher : MonoBehaviour
     {
         allRailways = RailwaysManager.Instance.AllRailways;
         List<SplineComputer> splineComputers = allRailways.ToList();
+        Debug.Log(splineComputers.IndexOf(splineFollower.spline));
         activeRailwayIndex = splineComputers.IndexOf(splineFollower.spline);
         newRailwayIndex = activeRailwayIndex;
         splineProjector.spline = allRailways[activeRailwayIndex];
-        Debug.Log($"activeRailwayIndex = {activeRailwayIndex}");
     }
 
     public void SwitchRailway()
