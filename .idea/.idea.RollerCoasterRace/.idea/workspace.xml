@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DebugTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DebugTools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Template.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +164,8 @@
       <workItem from="1604049517716" duration="6478000" />
       <workItem from="1604130927819" duration="1432000" />
       <workItem from="1604202504224" duration="622000" />
-      <workItem from="1604248875889" duration="641000" />
+      <workItem from="1604248875889" duration="1236000" />
+      <workItem from="1604295693334" duration="597000" />
     </task>
     <servers />
   </component>
