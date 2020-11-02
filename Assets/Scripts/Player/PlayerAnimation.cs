@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour
         animationEvents.OnRailwayEnd += delegate
         {
             FallDown();
-            Invoke("CallOnLoseLevel", 1f);
+            Invoke(nameof(CallOnLoseLevel), 1f);
         };
     }
 
