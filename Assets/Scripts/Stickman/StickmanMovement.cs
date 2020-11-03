@@ -114,8 +114,6 @@ public class StickmanMovement : MonoBehaviour
 
     private void CheckSpeed()
     {
-        float limit = limitMovementSpeed - 15.0f;
-        Debug.Log($"currentSpeed = {currentMovementSpeed} , limitspeed = {limit}");
         if (currentMovementSpeed >= limitMovementSpeed - 5.0f)
         {
             stickmanEvents.OnHighSpeedReached();

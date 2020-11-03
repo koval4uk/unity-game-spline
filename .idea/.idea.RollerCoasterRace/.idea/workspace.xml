@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="" />
+    <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AlexEnviroment/Enviroment_002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AlexEnviroment/Enviroment_002.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_002.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,11 +112,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
       </list>
     </option>
@@ -168,7 +177,7 @@
       <workItem from="1604202504224" duration="622000" />
       <workItem from="1604248875889" duration="1236000" />
       <workItem from="1604295693334" duration="16639000" />
-      <workItem from="1604384610968" duration="13413000" />
+      <workItem from="1604384610968" duration="14960000" />
     </task>
     <servers />
   </component>

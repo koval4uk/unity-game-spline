@@ -45,6 +45,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void SwitchTeeter()
     {
+        Debug.Log("<color=blue>SwitchTeeter</color>");
         isTeeter = !isTeeter;
         animator.SetBool(teeterHash, isTeeter);
     }
