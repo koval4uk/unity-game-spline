@@ -4949,10 +4949,6 @@ MonoBehaviour:
   _sampleMode: 0
   subscribers:
   - {fileID: 3386415786855299122}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   nodes: []
 --- !u!1 &3386415787402464336
 GameObject:
