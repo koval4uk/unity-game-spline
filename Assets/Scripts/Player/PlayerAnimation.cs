@@ -29,8 +29,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         stickmanEvents.OnRailwayEnd += delegate
         {
-            FallDown();
-            Invoke(nameof(CallOnLoseLevel), 1f);
+            StartCoroutine(nameof(FallDownCoroutine));
         };
         stickmanEvents.OnTeeterSwitch += SwitchTeeter;
         stickmanEvents.OnHighSpeedReached += ActivateHighSpeed;
@@ -94,6 +93,13 @@ public class PlayerAnimation : MonoBehaviour
             Debug.Log("<color=red>Stop Warp Effect!</color>");
             warpEffect.Stop();
         }
+    }
+
+    IEnumerator FallDownCoroutine()
+    {
+       FallDown();
+       Invoke(nameof(CallOnLoseLevel), 0.5f);
+       yield return new WaitForSeconds(.1f);
     }
 
     private void FallDown()
