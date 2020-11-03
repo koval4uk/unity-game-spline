@@ -10,6 +10,7 @@ public class MainProjector : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log($"<color=red>Awake Main Projector in gameobject {gameObject.name}</color>");
         RailwaysManager.Instance.CalculateMainRailway();
         splineProjector = GetComponent<SplineProjector>();
         splineProjector.spline = FindObjectsOfType<SplineComputer>()

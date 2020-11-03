@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using Dreamteck.Splines;
+using Singleton;
 using UnityEngine;
 
-public class PositionSystem : MonoBehaviour
+public class PositionSystem : Singleton<PositionSystem>
 {
-    
     private SplineProjector[] splineProjectors;
     
     private void Start()
@@ -29,5 +29,4 @@ public class PositionSystem : MonoBehaviour
         
         return ++indexPlayerAmongAllProjectors;
     }
-
 }

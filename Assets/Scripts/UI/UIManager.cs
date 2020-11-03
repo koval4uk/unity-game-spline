@@ -7,6 +7,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] public GameObject mainMenuPanel;
+    [SerializeField] public GameObject gamePlayPanel;
     [SerializeField] public GameObject losePanel;
     [SerializeField] public GameObject winPanel;
     
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     public void SubscribeToNecessaryEvets()
     {
         Observer.Instance.OnLoadMainMenu += delegate { ActivatePanel(mainMenuPanel); };
+        Observer.Instance.OnStartGame += delegate { ActivatePanel(gamePlayPanel); };
         Observer.Instance.OnLoseLevel += delegate { ActivatePanel(losePanel); };
         Observer.Instance.OnWinLevel += delegate { ActivatePanel(winPanel); };
     }
@@ -32,7 +34,8 @@ public class UIManager : MonoBehaviour
     private void CachePanels()
     {
         allPanels.Add(mainMenuPanel);
-        allPanels.Add(losePanel);
+        allPanels.Add(gamePlayPanel);
+        allPanels.Add(winPanel);
         allPanels.Add(winPanel);
     }
     
