@@ -9,7 +9,7 @@ TagManager:
   - Modificator
   - MainProjector
   - Edge
-  - TeeterAnimate
+  - TeeterSwitcher
   layers:
   - Default
   - TransparentFX

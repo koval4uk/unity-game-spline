@@ -71,9 +71,9 @@ public class StickmanCollision : MonoBehaviour
             stickmanEvents.OnRailwayEnd();
         }
 
-        if (other.CompareTag(GameConstants.TagTeeterAnimate))
+        if (other.CompareTag(GameConstants.TagTeeterSwitcher))
         {
-            stickmanEvents.OnTeeterAnimate();
+            stickmanEvents.OnTeeterSwitch();
         }
     }
 

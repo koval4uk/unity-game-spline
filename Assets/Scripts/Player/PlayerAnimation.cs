@@ -12,7 +12,10 @@ public class PlayerAnimation : MonoBehaviour
     private SplineFollower follower;
     private ParticleSystem warpEffect;
     private int teeterHash = Animator.StringToHash("isTeeter");
+    private int raiseHandsHash = Animator.StringToHash("isRaiseHands");
+    private bool isTeeter;
     private bool isHighSpeed;
+    private bool isRaiseHands;
 
     private void Awake()
     {
@@ -29,8 +32,10 @@ public class PlayerAnimation : MonoBehaviour
             FallDown();
             Invoke(nameof(CallOnLoseLevel), 1f);
         };
-        stickmanEvents.OnTeeterAnimate += ActivateTeeter;
+        stickmanEvents.OnTeeterSwitch += SwitchTeeter;
         stickmanEvents.OnHighSpeedReached += ActivateHighSpeed;
+        stickmanEvents.OnSlowSpeed += DeactivateHighSpeed;
+        stickmanEvents.OnNitroAnimation += RaiseHands;
     }
 
     private void Update()
@@ -38,19 +43,41 @@ public class PlayerAnimation : MonoBehaviour
         CheckWarpEffect();
     }
 
-    private void ActivateTeeter()
+    private void SwitchTeeter()
     {
-        animator.SetBool(teeterHash, true);
+        isTeeter = !isTeeter;
+        animator.SetBool(teeterHash, isTeeter);
     }
 
     private void ActivateHighSpeed()
     {
+        if(isRaiseHands)
+            return;
+        
         isHighSpeed = true;
+        animator.SetBool(raiseHandsHash, isHighSpeed);
     }
     
     private void DeactivateHighSpeed()
     {
+        if(isRaiseHands)
+            return;
+        
         isHighSpeed = false;
+        animator.SetBool(raiseHandsHash, isHighSpeed);
+    }
+
+    private void RaiseHands()
+    {
+        animator.SetBool(raiseHandsHash, true);
+        StartCoroutine(RaiseHandsDelay());
+    }
+
+    private IEnumerator RaiseHandsDelay()
+    {
+        isRaiseHands = true;
+        yield return new WaitForSeconds(1.5f);
+        isRaiseHands = false;
     }
 
     private void CheckWarpEffect()
@@ -58,6 +85,7 @@ public class PlayerAnimation : MonoBehaviour
         if (isHighSpeed && !warpEffect.isPlaying)
         {
             warpEffect.Play();
+            
             Debug.Log("<color=red>Play Warp Effect!</color>");
         }
         else if(!isHighSpeed && warpEffect.isPlaying)

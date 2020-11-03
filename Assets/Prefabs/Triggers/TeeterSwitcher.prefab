@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1456249697357680359}
   - component: {fileID: 1456249697357680358}
   m_Layer: 0
-  m_Name: TeeterAnimate
-  m_TagString: TeeterAnimate
+  m_Name: TeeterSwitcher
+  m_TagString: TeeterSwitcher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
