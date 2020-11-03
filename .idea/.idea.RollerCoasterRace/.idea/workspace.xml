@@ -4,22 +4,13 @@
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy2(ToDelete).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy2(ToDelete).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy3(ToDelete).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy3(ToDelete).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ErmekMaterials/Player/TrolleyE.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ErmekMaterials/Player/TrolleyE.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AlexEnviroment/Enviroment_002.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AlexEnviroment/Enviroment_002.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RegularTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RegularTemplate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev_Artur.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev_Artur.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainProjector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainProjector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RailwaysManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RailwaysManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +55,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Swipe/SwipeLogger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRailwaySwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Dreamteck/Splines/Components/SplineFollower.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Swipe/SwipeDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Dreamteck/Splines/Components/ObjectController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,6 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Dreamteck/Splines/Components/SplineTracer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Enemies/Enemy.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RailwaysManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/IObstacle.cs.meta" root0="FORCE_HIGHLIGHTING" />
@@ -116,7 +107,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DebugTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRailwaySwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
@@ -128,6 +118,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainProjector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
       </list>
     </option>
   </component>
@@ -187,7 +178,7 @@
       <workItem from="1604202504224" duration="622000" />
       <workItem from="1604248875889" duration="1236000" />
       <workItem from="1604295693334" duration="16639000" />
-      <workItem from="1604384610968" duration="3296000" />
+      <workItem from="1604384610968" duration="4286000" />
     </task>
     <servers />
   </component>
