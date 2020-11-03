@@ -105,7 +105,7 @@ public class PlayerAnimation : MonoBehaviour
     private void FallDown()
     {
         follower.follow = false;
-        transform.DOMoveY(-5f, 0.5f);
+        transform.DOMoveY(-10f, 0.5f);
         transform.DORotate(new Vector3(90f, 0f, 0f), 0.5f);
     }
 
