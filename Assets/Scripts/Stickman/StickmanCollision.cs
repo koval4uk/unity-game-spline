@@ -7,7 +7,6 @@ public class StickmanCollision : MonoBehaviour
 {
     private StickmanEvents stickmanEvents;
     private EnemyAnimationEvents enemyAnimationEvents;
-    private PlayerAnimationEvents playerAnimationEvents;
 
     private void Awake()
     {
@@ -18,7 +17,6 @@ public class StickmanCollision : MonoBehaviour
     {
         stickmanEvents = GetComponentInParent<StickmanEvents>();
         enemyAnimationEvents = GetComponentInParent<EnemyAnimationEvents>();
-        playerAnimationEvents = GetComponentInParent<PlayerAnimationEvents>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -70,7 +68,7 @@ public class StickmanCollision : MonoBehaviour
         
         if(other.CompareTag(GameConstants.TagEdge))
         {
-            playerAnimationEvents.OnRailwayEnd();
+            stickmanEvents.OnRailwayEnd();
         }
     }
 

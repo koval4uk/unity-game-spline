@@ -6,18 +6,18 @@ using Dreamteck.Splines;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    private PlayerAnimationEvents animationEvents;
+    private StickmanEvents stickmanEvents;
     private SplineFollower follower;
 
     private void Awake()
     {
-        animationEvents = GetComponent<PlayerAnimationEvents>();
+        stickmanEvents = GetComponent<StickmanEvents>();
         follower = GetComponent<SplineFollower>();
     }
 
     private void OnEnable()
     {
-        animationEvents.OnRailwayEnd += delegate
+        stickmanEvents.OnRailwayEnd += delegate
         {
             FallDown();
             Invoke(nameof(CallOnLoseLevel), 1f);
