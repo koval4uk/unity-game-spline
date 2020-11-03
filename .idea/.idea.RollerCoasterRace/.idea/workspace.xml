@@ -4,11 +4,17 @@
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_Cheering.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_Cheering.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_Dancing.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_Dancing.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_Push.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_Push.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player_RaiseHands.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player_RaiseHands.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Triggers/TeeterAnimate.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Triggers/TeeterAnimate.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_002_Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,23 +106,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PositionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EffectsHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DebugTools.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyRailwaySwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RailwaysManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainProjector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ProgressBarManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/System/PositionSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRailwaySwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/Nitro.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
       </list>
     </option>
   </component>
@@ -176,7 +182,7 @@
       <workItem from="1604202504224" duration="622000" />
       <workItem from="1604248875889" duration="1236000" />
       <workItem from="1604295693334" duration="16639000" />
-      <workItem from="1604384610968" duration="5255000" />
+      <workItem from="1604384610968" duration="13401000" />
     </task>
     <servers />
   </component>

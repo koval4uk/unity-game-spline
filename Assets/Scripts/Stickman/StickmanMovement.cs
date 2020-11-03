@@ -11,7 +11,7 @@ public class StickmanMovement : MonoBehaviour
     [SerializeField] private float limitMovementSpeed;
     [SerializeField] private float forwardSpeedStep;
     
-    private StickmanEvents events;
+    private StickmanEvents stickmanEvents;
     private SplineFollower follower;
     private float speedMultiplier = 1f;
     private float lastHeight;
@@ -27,14 +27,19 @@ public class StickmanMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        events.OnMove += StartMove;
-        events.OnChangeSpeed += SetSpeed;
-        events.OnMultiplySpeed += SetSpeedMultiplier;
+        stickmanEvents.OnMove += StartMove;
+        stickmanEvents.OnChangeSpeed += SetSpeed;
+        stickmanEvents.OnMultiplySpeed += SetSpeedMultiplier;
+    }
+
+    private void Update()
+    {
+        CheckSpeed();
     }
 
     private void CacheComponents()
     {
-        events = GetComponent<StickmanEvents>();
+        stickmanEvents = GetComponent<StickmanEvents>();
         follower = GetComponent<SplineFollower>();
     }
 
@@ -105,5 +110,19 @@ public class StickmanMovement : MonoBehaviour
         Debug.Log("<color=red>Decrease Speed!</color>");
         lastHeight = transform.position.y;
         return speedDecrease;
+    }
+
+    private void CheckSpeed()
+    {
+        float limit = limitMovementSpeed - 15.0f;
+        Debug.Log($"currentSpeed = {currentMovementSpeed} , limitspeed = {limit}");
+        if (currentMovementSpeed >= limitMovementSpeed - 5.0f)
+        {
+            stickmanEvents.OnHighSpeedReached();
+        }
+        else
+        {
+            stickmanEvents.OnSlowSpeed();
+        }
     }
 }

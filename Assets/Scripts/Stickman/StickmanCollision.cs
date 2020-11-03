@@ -70,6 +70,11 @@ public class StickmanCollision : MonoBehaviour
         {
             stickmanEvents.OnRailwayEnd();
         }
+
+        if (other.CompareTag(GameConstants.TagTeeterSwitcher))
+        {
+            stickmanEvents.OnTeeterSwitch();
+        }
     }
 
     private void OnTriggerExit(Collider other)
