@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class Nitro : MonoBehaviour, IModificator
 {
-    [SerializeField] private GameObject model;
+    //[SerializeField] private GameObject model;
+    private Animator animator;
     private ParticleSystem warpEffect;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         warpEffect = EffectsHolder.Instance.warpVFX.GetComponent<ParticleSystem>();
     }
 
@@ -35,6 +37,7 @@ public class Nitro : MonoBehaviour, IModificator
 
     private void DestroyAnimation()
     {
-        model.SetActive(false);
+        //model.SetActive(false);
+        animator.SetTrigger("OnDestroy");
     }
 }

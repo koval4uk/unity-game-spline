@@ -35,9 +35,9 @@ public class PlayerRailwaySwitcher : MonoBehaviour
     private void SwitchRailway(SwipeData swipeData)
     {
         newRailway = RailwaysManager.Instance.GetNewRailway(swipeData, ref newRailwayIndex);
-
+        //Debug.Log($"<color=green>currentPercent = {splineProjector.result.percent} </color>");
         splineProjector.spline = newRailway;
-        Debug.Log($"<color=red>currentPercent = {splineProjector.result.percent} </color>");
+        //Debug.Log($"<color=red>currentPercent = {splineProjector.result.percent} </color>");
         currentPercent = splineProjector.result.percent;
         if (!RailwaysManager.Instance.IsSwitchValid(currentPercent))
         {
@@ -46,11 +46,11 @@ public class PlayerRailwaySwitcher : MonoBehaviour
         }
         activeRailwayIndex = newRailwayIndex;
         currentPosition = splineProjector.spline.EvaluatePosition(currentPercent);
-        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = currentPosition;
-        cube.transform.rotation = Quaternion.identity;
+        //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //cube.transform.position = currentPosition;
+        //cube.transform.rotation = Quaternion.identity;
 
-        splineFollower.spline = null;
+        //splineFollower.spline = null;
         transform.DOMoveX(currentPosition.x, GameConstants.SwitchRailwayTime);
 
         StartCoroutine(Switch());
@@ -59,11 +59,12 @@ public class PlayerRailwaySwitcher : MonoBehaviour
     private IEnumerator Switch()
     {
         yield return new WaitForSeconds(0.01f);
-        currentPercent = splineProjector.result.percent;
+        //splineProjector.spline = splineFollower.spline;
+        //currentPercent = splineProjector.result.percent;
 
         //splineFollower.motion.applyPosition = false;
         splineFollower.spline = newRailway;
-        splineFollower.SetPercent(currentPercent);
+        splineFollower.result.percent = currentPercent;
         //splineFollower.motion.applyPosition = true;
     }
 }
