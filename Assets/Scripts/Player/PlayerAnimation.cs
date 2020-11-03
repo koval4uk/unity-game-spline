@@ -29,8 +29,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         stickmanEvents.OnRailwayEnd += delegate
         {
-            FallDown();
-            Invoke(nameof(CallOnLoseLevel), 1f);
+            StartCoroutine(nameof(FallDownCoroutine));
         };
         stickmanEvents.OnTeeterSwitch += SwitchTeeter;
         stickmanEvents.OnHighSpeedReached += ActivateHighSpeed;
@@ -96,10 +95,17 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
+    IEnumerator FallDownCoroutine()
+    {
+       FallDown();
+       Invoke(nameof(CallOnLoseLevel), 0.5f);
+       yield return new WaitForSeconds(.1f);
+    }
+
     private void FallDown()
     {
         follower.follow = false;
-        transform.DOMoveY(-5f, 0.5f);
+        transform.DOMoveY(-10f, 0.5f);
         transform.DORotate(new Vector3(90f, 0f, 0f), 0.5f);
     }
 
