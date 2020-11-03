@@ -824,7 +824,6 @@
             <e p="StickmanEvents.cs" t="Include" />
             <e p="StickmanModificator.cs" t="Include" />
             <e p="StickmanMovement.cs" t="Include" />
-            <e p="StickmanUI.cs" t="Include" />
           </e>
           <e p="Swipe" t="Include">
             <e p="SwipeDetector.cs" t="Include" />
