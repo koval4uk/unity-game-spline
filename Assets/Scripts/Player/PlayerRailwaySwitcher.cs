@@ -61,9 +61,9 @@ public class PlayerRailwaySwitcher : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         currentPercent = splineProjector.result.percent;
 
-        //splineFollower.motion.applyPosition = false;
+        splineFollower.motion.applyPosition = false;
         splineFollower.spline = newRailway;
         splineFollower.SetPercent(currentPercent);
-        //splineFollower.motion.applyPosition = true;
+        splineFollower.motion.applyPosition = true;
     }
 }

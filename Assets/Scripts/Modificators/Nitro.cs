@@ -6,11 +6,9 @@ using UnityEngine;
 public class Nitro : MonoBehaviour, IModificator
 {
     [SerializeField] private GameObject model;
-    private ParticleSystem warpEffect;
 
     private void Start()
     {
-        warpEffect = EffectsHolder.Instance.warpVFX.GetComponent<ParticleSystem>();
     }
 
     public void Trigger(StickmanEvents stickmanEvents)
@@ -23,14 +21,9 @@ public class Nitro : MonoBehaviour, IModificator
     {
         stickmanEvents.OnMultiplySpeed(GameConstants.nitroMultiplier);
         stickmanEvents.OnNitroAnimation();
-        warpEffect.Stop();
 
-        if (stickmanEvents.IsPlayer)
-            warpEffect.Play();
-        
         yield return new WaitForSeconds(GameConstants.nitroTime);
         stickmanEvents.OnMultiplySpeed(1f);
-        warpEffect.Stop();
     }
 
     private void DestroyAnimation()
