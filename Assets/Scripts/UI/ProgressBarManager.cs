@@ -9,12 +9,11 @@ using Dreamteck.Splines;
 public class ProgressBarManager : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] private SplineProjector projector;
+    private SplineProjector projector;
 
     private void Start()
     {
-        projector = FindObjectsOfType<SplineProjector>()
-            .First(c => c.name.Equals("PlayerPosition") && c.CompareTag(GameConstants.TagMainProjector));
+        projector = PlayerManager.Instance.GetComponent<SplineProjector>();
     }
     
     private void Update()

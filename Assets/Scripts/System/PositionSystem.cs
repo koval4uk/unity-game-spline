@@ -1,48 +1,58 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Dreamteck.Splines;
-using TMPro;
+using Singleton;
 using UnityEngine;
 
-public class PositionSystem : MonoBehaviour
+public class PositionSystem : Singleton<PositionSystem>
 {
+    private string[] allPositionLetters = new string[]
+    {
+        "st",
+        "nd",
+        "rd",
+        "th",
+        "th",
+        "th",
+        "th",
+        "th",
+        "th",
+        "th"
+    };
 
-    private SplineProjector[] _splineProjectors;
+    private List<SplineProjector> splineProjectors;
+    private int currentPositionIndex;
     
     private void Start()
     {
-        _splineProjectors = FindObjectsOfType<SplineProjector>()
-            .Where(c => c.CompareTag(GameConstants.TagMainProjector))
-            .ToArray();
+        splineProjectors = FindObjectsOfType<SplineProjector>()
+            .ToList()
+            .ConvertAll(splineProjector => {
+                    splineProjector.spline = RailwaysManager.Instance.MainRailway;
+                    return splineProjector;
+            })
+            .ToList();
     }
     
-    private void Update()
+    public int GetPlayerPositionNumber()
     {
-        var sortedSplineProjectors = SortPlayersByProgress();
-        UpdatePositionForPlayer(sortedSplineProjectors);
-    }
-
-    private SplineProjector[] SortPlayersByProgress()
-    {
-        Array.ForEach(_splineProjectors, splineProjector =>
+        int indexPlayerAmongAllProjectors = splineProjectors
+            .ConvertAll(splineProjector =>
             {
                 splineProjector.spline = RailwaysManager.Instance.MainRailway;
-            });
-        
-        return _splineProjectors
+                return splineProjector;
+            })
             .OrderBy(player => -player.result.percent)
-            .ToArray();
+            .ToList()
+            .FindIndex(projector => projector.name == GameConstants.TagPlayer);
+        currentPositionIndex = indexPlayerAmongAllProjectors;
+        return ++indexPlayerAmongAllProjectors;
     }
 
-    private static void UpdatePositionForPlayer(SplineProjector[] sortedSplineProjectors)
+    public string GetPositionLetter()
     {
-        int initNumberInRace = 1;
-        
-        Array.ForEach(sortedSplineProjectors, splineProjector =>
-            {
-                var textMeshPro = splineProjector.gameObject.GetComponentInChildren<TextMeshPro>();
-                textMeshPro.SetText(initNumberInRace++.ToString());
-            });
+        return allPositionLetters[currentPositionIndex];
     }
     
 }

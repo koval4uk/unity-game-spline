@@ -11,12 +11,13 @@ public class GameConstants : MonoBehaviour
     public const string TagPlayer = "Player";
     public const string TagFinish = "Finish";
     public const string TagMainProjector = "MainProjector";
+    public const string TagEdge = "Edge";
 
     public const float PlayerStartMovementSpeed = 2.0f;
     public const float PlayerLimitMovementSpeed = 28.0f;
     public const float PlayerIncreaseSpeed = 1.5f;
     public const float PlayerDecreaseSpeed = -2.2f;
-    public const float PlayerMinSpeed = 7.0f;
+    public const float PlayerMinSpeed = 9.0f;
 
     public const float nitroMultiplier = 1.5f;
     public const float nitroTime = 2.5f;

@@ -808,8 +808,8 @@
           </e>
           <e p="Player" t="Include">
             <e p="PlayerAnimation.cs" t="Include" />
-            <e p="PlayerAnimationEvents.cs" t="Include" />
             <e p="PlayerRailwaySwitcher.cs" t="Include" />
+            <e p="PlayerUI.cs" t="Include" />
           </e>
           <e p="PlayerManager.cs" t="Include" />
           <e p="RailModificators" t="Include">
@@ -824,14 +824,12 @@
             <e p="StickmanEvents.cs" t="Include" />
             <e p="StickmanModificator.cs" t="Include" />
             <e p="StickmanMovement.cs" t="Include" />
-            <e p="StickmanUI.cs" t="Include" />
           </e>
           <e p="Swipe" t="Include">
             <e p="SwipeDetector.cs" t="Include" />
             <e p="SwipeLogger.cs" t="Include" />
           </e>
           <e p="system" t="Include">
-            <e p="DeathSystem.cs" t="Include" />
             <e p="PositionSystem.cs" t="Include" />
           </e>
           <e p="UI" t="Include">

@@ -20,6 +20,11 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimationEvents.OnKickFromBehind += GetKickedFromBehind;
         enemyAnimationEvents.OnKickLeft += GetKickedFromLeft;
         enemyAnimationEvents.OnKickRight += GetKickedFromRight;
+        enemyAnimationEvents.FallDown += delegate
+        {
+            FallDown();
+            Invoke(nameof(HideFollower), 1f);
+        };
     }
 
     private void GetKickedFromBehind()
@@ -40,5 +45,17 @@ public class EnemyAnimation : MonoBehaviour
         follower.follow = false;
         transform.DOMoveX(8f, 0.5f);
         transform.DORotate(new Vector3(0f, 0f, -90f), 0.5f);
+    }
+    
+    private void FallDown()
+    {
+        follower.follow = false;
+        transform.DOMoveY(-5f, 0.5f);
+        transform.DORotate(new Vector3(90f, 0f, 0f), 0.5f);
+    } 
+    
+    private void HideFollower()
+    {
+        follower.gameObject.SetActive(false);
     }
 }

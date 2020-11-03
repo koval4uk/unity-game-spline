@@ -8,6 +8,7 @@ TagManager:
   - RailModificator
   - Modificator
   - MainProjector
+  - Edge
   layers:
   - Default
   - TransparentFX

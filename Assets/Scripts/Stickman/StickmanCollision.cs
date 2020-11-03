@@ -64,6 +64,11 @@ public class StickmanCollision : MonoBehaviour
         if(other.CompareTag(GameConstants.TagFinish))
         {
             stickmanEvents.OnFinish();
+        } 
+        
+        if(other.CompareTag(GameConstants.TagEdge))
+        {
+            stickmanEvents.OnRailwayEnd();
         }
     }
 

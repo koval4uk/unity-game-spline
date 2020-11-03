@@ -37,6 +37,7 @@ public class RailwaysManager : Singleton<RailwaysManager>
 
     public SplineComputer CalculateMainRailway()
     {
+        Debug.Log("<color=red>CalculateMainRailway</color>");
         mainRailway = allRailways[0];
         foreach(var railway in allRailways)
         {

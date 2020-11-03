@@ -11,4 +11,6 @@ public class EnemyAnimationEvents : MonoBehaviour
 
     public Action OnTurnRight = delegate { Debug.Log("OnTurnRight Triggered!"); };
     public Action OnTurnLeft = delegate { Debug.Log("OnTurnLeft Triggered!"); };
+    
+    public Action FallDown = delegate { Debug.Log("FallDown Triggered!"); };
 }
