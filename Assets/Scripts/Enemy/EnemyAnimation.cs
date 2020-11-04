@@ -58,7 +58,6 @@ public class EnemyAnimation : MonoBehaviour
     
     private void FallDown()
     {
-        Observer.Instance.CallOnLoseLevel();
         //animator.SetTrigger(dieHash);
         AnimateTrolley();
         AnimateStickman();
