@@ -11,10 +11,12 @@ public class EnemyAnimation : MonoBehaviour
     
     private EnemyAnimationEvents enemyAnimationEvents;
     private SplineFollower follower;
+    private Animator animator;
     private Vector3 trolleyPushDirection = new Vector3(0.0f, -.5f, 1.0f);
     private Vector3 stickmanPushDirection = new Vector3(0.0f, -.1f, .5f);
     private float trolleyPushForce = 10.0f;
     private float stickmanPushForce = 3.0f;
+    private int dieHash = Animator.StringToHash("Die");
 
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class EnemyAnimation : MonoBehaviour
     {
         enemyAnimationEvents = GetComponent<EnemyAnimationEvents>();
         follower = GetComponent<SplineFollower>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void GetKickedFromBehind()
@@ -58,7 +61,7 @@ public class EnemyAnimation : MonoBehaviour
     
     private void FallDown()
     {
-        //animator.SetTrigger(dieHash);
+        animator.SetTrigger(dieHash);
         AnimateTrolley();
         AnimateStickman();
     }
