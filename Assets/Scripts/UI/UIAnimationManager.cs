@@ -16,16 +16,16 @@ public class UIAnimationManager : MonoBehaviour
 
     private void OnEnable()
 	{
-        SubscribeToNecessaryEvets();
+        SubscribeToNecessaryEvents();
     }
 
-    public void SubscribeToNecessaryEvets()
+    public void SubscribeToNecessaryEvents()
     {
         Observer.Instance.OnLoadMainMenu += ShowMainMenu;
         Observer.Instance.OnStartGame += CloseMainMenu;
         Observer.Instance.OnWinLevel += ShowWinPanel;
         Observer.Instance.OnWinLevel += delegate { StartCoroutine(PlayUIVFX(confettiVFX, 0f, 2.5f)); };
-        Observer.Instance.OnLoseLevel += SlideLosePanel;
+        Observer.Instance.OnLoseLevel += delegate { StartCoroutine(SlideLosePanel()); };
         Observer.Instance.OnGetStimulationText += ShowStimulationText;
     }
 
@@ -56,8 +56,9 @@ public class UIAnimationManager : MonoBehaviour
         uiManager.winPanel.GetComponent<RectTransform>().DOAnchorPosY(0, 0.8f);
 	}
 
-	private void SlideLosePanel()
+	private IEnumerator SlideLosePanel()
 	{
+		yield return new WaitForSeconds(2.0f);
         uiManager.losePanel.GetComponent<RectTransform>().DOAnchorPosX(0, 0.8f);
     }
 

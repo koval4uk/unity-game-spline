@@ -30,6 +30,7 @@ public class StickmanMovement : MonoBehaviour
         stickmanEvents.OnMove += StartMove;
         stickmanEvents.OnChangeSpeed += SetSpeed;
         stickmanEvents.OnMultiplySpeed += SetSpeedMultiplier;
+        stickmanEvents.OnRailwayEnd += StopMove;
     }
 
     private void Update()
@@ -57,7 +58,13 @@ public class StickmanMovement : MonoBehaviour
         follower.follow = true;
         StartCoroutine(IncreaseSpeed());
     }
-
+    
+    private void StopMove()
+    {
+        follower.follow = false;
+        currentMovementSpeed = 0.0f;
+    }
+    
     private IEnumerator IncreaseSpeed()
     {
         yield return new WaitForSeconds(0.1f);
@@ -123,4 +130,5 @@ public class StickmanMovement : MonoBehaviour
             stickmanEvents.OnSlowSpeed();
         }
     }
+
 }

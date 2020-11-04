@@ -15,7 +15,7 @@ public class Observer : Singleton<Observer>
     public Action OnLoadNextLevel = delegate { Debug.Log("OnLoadNextLevel trigerred"); };
     public Action<int> OnAddingScore = delegate { Debug.Log("OnAddingScore trigerred"); };
     public Action<StimulType> OnGetStimulationText = delegate { Debug.Log("OnGetStimulationText triggered"); };
-
+    
     private void Awake()
     {
         Debug.Log("Awake Observer");

@@ -17,10 +17,12 @@ public class CameraController : MonoBehaviour
     private void OnEnable()
     {
         Observer.Instance.OnWinLevel += StopFollow;
+        Observer.Instance.OnLoseLevel += StopFollow;
     }
 
     private void StopFollow()
     {
         camera.Follow = null;
+        camera.LookAt = null;
     }
 }
