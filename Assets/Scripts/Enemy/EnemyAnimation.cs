@@ -6,9 +6,15 @@ using Dreamteck.Splines;
 
 public class EnemyAnimation : MonoBehaviour
 {
+    [SerializeField] private Rigidbody trolleyRigidbody;
+    [SerializeField] private Rigidbody stickmanRigidbody;
+    
     private EnemyAnimationEvents enemyAnimationEvents;
     private SplineFollower follower;
-    private Rigidbody rigidbody;
+    private Vector3 trolleyPushDirection = new Vector3(0.0f, -.5f, 1.0f);
+    private Vector3 stickmanPushDirection = new Vector3(0.0f, -.1f, .5f);
+    private float trolleyPushForce = 10.0f;
+    private float stickmanPushForce = 3.0f;
 
     private void Awake()
     {
@@ -21,11 +27,11 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimationEvents.OnKickLeft += GetKickedFromLeft;
         enemyAnimationEvents.OnKickRight += GetKickedFromRight;
         enemyAnimationEvents.FallDown += FallDown;
+        enemyAnimationEvents.FallDown += delegate { StartCoroutine(Deactivate()); };
     }
 
     private void CacheComponents()
     {
-        rigidbody = GetComponent<Rigidbody>();
         enemyAnimationEvents = GetComponent<EnemyAnimationEvents>();
         follower = GetComponent<SplineFollower>();
     }
@@ -52,13 +58,29 @@ public class EnemyAnimation : MonoBehaviour
     
     private void FallDown()
     {
-        Debug.Log("<color=red>Fall Down!</color>");
-        rigidbody.constraints = RigidbodyConstraints.None;
-        rigidbody.useGravity = true;
-    } 
-    
-    private void HideFollower()
-    {
-        follower.gameObject.SetActive(false);
+        Observer.Instance.CallOnLoseLevel();
+        //animator.SetTrigger(dieHash);
+        AnimateTrolley();
+        AnimateStickman();
     }
+
+    private void AnimateTrolley()
+    {
+        trolleyRigidbody.useGravity = true;
+        trolleyRigidbody.isKinematic = false;
+        trolleyRigidbody.AddForce(trolleyPushDirection * trolleyPushForce, ForceMode.Impulse);
+    }
+
+    private void AnimateStickman()
+    {
+        stickmanRigidbody.useGravity = true;
+        stickmanRigidbody.isKinematic = false;
+        stickmanRigidbody.AddForce(stickmanPushDirection * stickmanPushForce, ForceMode.Impulse);
+    }
+
+    private IEnumerator Deactivate()
+    {
+        yield return new WaitForSeconds(4.0f);
+    }
+
 }
