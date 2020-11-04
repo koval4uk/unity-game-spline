@@ -7,15 +7,20 @@ using Dreamteck.Splines;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    [SerializeField] private Rigidbody trolleyRigidbody;
+    [SerializeField] private Rigidbody stickmanRigidbody;
+    
     private StickmanEvents stickmanEvents;
     private Animator animator;
-    private Rigidbody rigidbody;
     private ParticleSystem warpEffect;
     private int teeterHash = Animator.StringToHash("isTeeter");
     private int raiseHandsHash = Animator.StringToHash("isRaiseHands");
     private int dieHash = Animator.StringToHash("Die");
     private bool isHighSpeed, isRaiseHands, isTeeter;
-    private float pushForce = 15.0f;
+    private Vector3 trolleyPushDirection = new Vector3(0.0f, -.5f, 1.0f);
+    private Vector3 stickmanPushDirection = new Vector3(0.0f, -.1f, .5f);
+    private float trolleyPushForce = 10.0f;
+    private float stickmanPushForce = 3.0f;
 
     private void Awake()
     {
@@ -41,7 +46,6 @@ public class PlayerAnimation : MonoBehaviour
         stickmanEvents = GetComponent<StickmanEvents>();
         animator = GetComponentInChildren<Animator>();
         warpEffect = EffectsHolder.Instance.warpVFX.GetComponent<ParticleSystem>();
-        rigidbody = GetComponent<Rigidbody>();
     }
 
     private void SwitchTeeter()
@@ -101,8 +105,21 @@ public class PlayerAnimation : MonoBehaviour
     {
         Observer.Instance.CallOnLoseLevel();
         animator.SetTrigger(dieHash);
-        rigidbody.constraints = RigidbodyConstraints.None;
-        rigidbody.useGravity = true;
-        rigidbody.AddRelativeForce(Vector3.forward * pushForce, ForceMode.Impulse);
+        AnimateTrolley();
+        AnimateStickman();
+    }
+
+    private void AnimateTrolley()
+    {
+        trolleyRigidbody.useGravity = true;
+        trolleyRigidbody.isKinematic = false;
+        trolleyRigidbody.AddForce(trolleyPushDirection * trolleyPushForce, ForceMode.Impulse);
+    }
+
+    private void AnimateStickman()
+    {
+        stickmanRigidbody.useGravity = true;
+        stickmanRigidbody.isKinematic = false;
+        stickmanRigidbody.AddForce(stickmanPushDirection * stickmanPushForce, ForceMode.Impulse);
     }
 }
