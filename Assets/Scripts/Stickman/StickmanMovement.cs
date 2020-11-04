@@ -18,6 +18,7 @@ public class StickmanMovement : MonoBehaviour
     private float speedIncrease = GameConstants.PlayerIncreaseSpeed;
     private float speedDecrease = GameConstants.PlayerDecreaseSpeed;
     private float threshold = 0.1f;
+    private Coroutine increaseSpeedCoroutine;
 
     private void Awake()
     {
@@ -35,6 +36,9 @@ public class StickmanMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!GameStarter.IsGameStarted)
+            return;
+        
         CheckSpeed();
     }
 
@@ -56,13 +60,15 @@ public class StickmanMovement : MonoBehaviour
     {
         Debug.Log($"Stickman {gameObject.name} start moving");
         follower.follow = true;
-        StartCoroutine(IncreaseSpeed());
+        increaseSpeedCoroutine = StartCoroutine(IncreaseSpeed());
     }
     
     private void StopMove()
     {
-        follower.follow = false;
         currentMovementSpeed = 0.0f;
+        follower.followSpeed = currentMovementSpeed;
+        follower.follow = false;
+        StopCoroutine(increaseSpeedCoroutine);
     }
     
     private IEnumerator IncreaseSpeed()
@@ -109,12 +115,12 @@ public class StickmanMovement : MonoBehaviour
         
         if (lastHeight > transform.position.y)
         {
-            Debug.Log("<color=red>Increase Speed!</color>");
+            Debug.Log("Increase Speed!");
             lastHeight = transform.position.y;
             return speedIncrease;
         }
 
-        Debug.Log("<color=red>Decrease Speed!</color>");
+        Debug.Log("Decrease Speed!");
         lastHeight = transform.position.y;
         return speedDecrease;
     }

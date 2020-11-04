@@ -822,7 +822,6 @@
           <e p="Stickman" t="Include">
             <e p="StickmanCollision.cs" t="Include" />
             <e p="StickmanEvents.cs" t="Include" />
-            <e p="StickmanFall.cs" t="Include" />
             <e p="StickmanModificator.cs" t="Include" />
             <e p="StickmanMovement.cs" t="Include" />
           </e>

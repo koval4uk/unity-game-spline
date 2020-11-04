@@ -9,28 +9,22 @@ public class PlayerAnimation : MonoBehaviour
 {
     private StickmanEvents stickmanEvents;
     private Animator animator;
-    private SplineFollower follower;
+    private Rigidbody rigidbody;
     private ParticleSystem warpEffect;
     private int teeterHash = Animator.StringToHash("isTeeter");
     private int raiseHandsHash = Animator.StringToHash("isRaiseHands");
-    private bool isTeeter;
-    private bool isHighSpeed;
-    private bool isRaiseHands;
+    private int dieHash = Animator.StringToHash("Die");
+    private bool isHighSpeed, isRaiseHands, isTeeter;
+    private float pushForce = 15.0f;
 
     private void Awake()
     {
-        stickmanEvents = GetComponent<StickmanEvents>();
-        animator = GetComponentInChildren<Animator>();
-        follower = GetComponent<SplineFollower>();
-        warpEffect = EffectsHolder.Instance.warpVFX.GetComponent<ParticleSystem>();
+        CacheComponents();
     }
 
     private void OnEnable()
     {
-        stickmanEvents.OnRailwayEnd += delegate
-        {
-            StartCoroutine(nameof(FallDownCoroutine));
-        };
+        stickmanEvents.OnRailwayEnd += FallDown;
         stickmanEvents.OnTeeterSwitch += SwitchTeeter;
         stickmanEvents.OnHighSpeedReached += ActivateHighSpeed;
         stickmanEvents.OnSlowSpeed += DeactivateHighSpeed;
@@ -40,6 +34,14 @@ public class PlayerAnimation : MonoBehaviour
     private void Update()
     {
         CheckWarpEffect();
+    }
+
+    private void CacheComponents()
+    {
+        stickmanEvents = GetComponent<StickmanEvents>();
+        animator = GetComponentInChildren<Animator>();
+        warpEffect = EffectsHolder.Instance.warpVFX.GetComponent<ParticleSystem>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     private void SwitchTeeter()
@@ -94,23 +96,13 @@ public class PlayerAnimation : MonoBehaviour
             warpEffect.Stop();
         }
     }
-
-    IEnumerator FallDownCoroutine()
-    {
-       FallDown();
-       Invoke(nameof(CallOnLoseLevel), 0.5f);
-       yield return new WaitForSeconds(.1f);
-    }
-
+    
     private void FallDown()
     {
-        follower.follow = false;
-        transform.DOMoveY(-10f, 0.5f);
-        transform.DORotate(new Vector3(90f, 0f, 0f), 0.5f);
-    }
-
-    private void CallOnLoseLevel()
-    {
         Observer.Instance.CallOnLoseLevel();
+        animator.SetTrigger(dieHash);
+        rigidbody.constraints = RigidbodyConstraints.None;
+        rigidbody.useGravity = true;
+        rigidbody.AddRelativeForce(Vector3.forward * pushForce, ForceMode.Impulse);
     }
 }

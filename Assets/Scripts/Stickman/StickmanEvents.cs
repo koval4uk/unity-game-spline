@@ -11,10 +11,10 @@ public class StickmanEvents : MonoBehaviour
     public Action OnSetInitialSpeed = delegate { Debug.Log("OnSetInitialSpeed Triggered!"); };
     public Action OnNitroAnimation = delegate { Debug.Log("OnRocketAnimation Triggered!"); };
     public Action OnFinish = delegate { Debug.Log("OnFinish Triggered!"); };
-    public Action OnRailwayEnd = delegate { Debug.Log("OnRailwayEnd Triggered!"); };
+    public Action OnRailwayEnd = delegate { Debug.Log("<color=red>OnRailwayEnd Triggered!</color>"); };
     public Action OnTeeterSwitch = delegate { Debug.Log("OnRailwayEnd Triggered!"); };
-    public Action OnHighSpeedReached = delegate { Debug.Log("<color=red>OnHighSpeedReached!</color>"); };
-    public Action OnSlowSpeed = delegate { Debug.Log("OnSlowSpeed Triggered!"); };
+    public Action OnHighSpeedReached = delegate { Debug.Log("OnHighSpeedReached!"); };
+    public Action OnSlowSpeed;
     
     // Unique events for enemy
     public Action OnObstacleDetected = delegate { Debug.Log("OnObstacleDetected Triggered!"); };

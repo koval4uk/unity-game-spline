@@ -8,11 +8,11 @@ public class EnemyAnimation : MonoBehaviour
 {
     private EnemyAnimationEvents enemyAnimationEvents;
     private SplineFollower follower;
+    private Rigidbody rigidbody;
 
     private void Awake()
     {
-        enemyAnimationEvents = GetComponent<EnemyAnimationEvents>();
-        follower = GetComponent<SplineFollower>();
+        CacheComponents();
     }
 
     private void OnEnable()
@@ -20,11 +20,14 @@ public class EnemyAnimation : MonoBehaviour
         enemyAnimationEvents.OnKickFromBehind += GetKickedFromBehind;
         enemyAnimationEvents.OnKickLeft += GetKickedFromLeft;
         enemyAnimationEvents.OnKickRight += GetKickedFromRight;
-        enemyAnimationEvents.FallDown += delegate
-        {
-            FallDown();
-            Invoke(nameof(HideFollower), 1f);
-        };
+        enemyAnimationEvents.FallDown += FallDown;
+    }
+
+    private void CacheComponents()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+        enemyAnimationEvents = GetComponent<EnemyAnimationEvents>();
+        follower = GetComponent<SplineFollower>();
     }
 
     private void GetKickedFromBehind()
@@ -49,9 +52,9 @@ public class EnemyAnimation : MonoBehaviour
     
     private void FallDown()
     {
-        follower.follow = false;
-        transform.DOMoveY(-5f, 0.5f);
-        transform.DORotate(new Vector3(90f, 0f, 0f), 0.5f);
+        Debug.Log("<color=red>Fall Down!</color>");
+        rigidbody.constraints = RigidbodyConstraints.None;
+        rigidbody.useGravity = true;
     } 
     
     private void HideFollower()
