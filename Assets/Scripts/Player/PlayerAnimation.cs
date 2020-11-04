@@ -17,7 +17,7 @@ public class PlayerAnimation : MonoBehaviour
     private int raiseHandsHash = Animator.StringToHash("isRaiseHands");
     private int dieHash = Animator.StringToHash("Die");
     private bool isHighSpeed, isRaiseHands, isTeeter;
-    private Vector3 trolleyPushDirection = new Vector3(0.0f, -.5f, 1.0f);
+    private Vector3 trolleyPushDirection = new Vector3(0.0f, 1.5f, -.2f);
     private Vector3 stickmanPushDirection = new Vector3(0.0f, -.1f, .5f);
     private float trolleyPushForce = 10.0f;
     private float stickmanPushForce = 3.0f;
@@ -113,13 +113,13 @@ public class PlayerAnimation : MonoBehaviour
     {
         trolleyRigidbody.useGravity = true;
         trolleyRigidbody.isKinematic = false;
-        trolleyRigidbody.AddForce(trolleyPushDirection * trolleyPushForce, ForceMode.Impulse);
+        trolleyRigidbody.AddRelativeForce(trolleyPushDirection * trolleyPushForce, ForceMode.Impulse);
     }
 
     private void AnimateStickman()
     {
         stickmanRigidbody.useGravity = true;
         stickmanRigidbody.isKinematic = false;
-        stickmanRigidbody.AddForce(stickmanPushDirection * stickmanPushForce, ForceMode.Impulse);
+        stickmanRigidbody.AddRelativeForce(stickmanPushDirection * stickmanPushForce, ForceMode.Impulse);
     }
 }
