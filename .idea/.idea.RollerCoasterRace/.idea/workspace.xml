@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Level_Fall_Ermek.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Level_Fall_Ermek.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Water/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Water/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Edge.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Edge.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,8 +119,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIAnimationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimation.cs" />
       </list>
     </option>
   </component>
@@ -178,7 +181,7 @@
       <workItem from="1604248875889" duration="1236000" />
       <workItem from="1604295693334" duration="16639000" />
       <workItem from="1604384610968" duration="15629000" />
-      <workItem from="1604469669027" duration="10351000" />
+      <workItem from="1604469669027" duration="11571000" />
     </task>
     <servers />
   </component>
