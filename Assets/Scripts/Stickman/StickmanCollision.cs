@@ -23,21 +23,22 @@ public class StickmanCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag(GameConstants.TagPlayer))
         {
-            if(other.contacts[0].normal == Vector3.forward)
+            Vector3 del_point = other.contacts[0].normal;
+            if (Mathf.Sqrt(del_point.y * del_point.y + del_point.z * del_point.z) > Mathf.Abs(del_point.x))
             {
                 enemyAnimationEvents.OnKickFromBehind();
                 stickmanEvents.OnHitFromBehind();
             }
-            else if(other.contacts[0].normal == Vector3.right)
+            else if (del_point.x > 0)
             {
                 enemyAnimationEvents.OnKickRight();
                 stickmanEvents.OnHitFromSide();
             }
-            else if(other.contacts[0].normal == Vector3.left)
+            else if (del_point.x < 0)
             {
                 enemyAnimationEvents.OnKickLeft();
                 stickmanEvents.OnHitFromSide();
-            }            
+            }
             Debug.Log($"{other.contacts[0].normal}");            
         }
     }
