@@ -773,6 +773,8 @@
           <e p="CameraController.cs" t="Include" />
           <e p="DebugTools.cs" t="Include" />
           <e p="Enemy" t="Include">
+            <e p="EnemyActivation.cs" t="Include" />
+            <e p="EnemyActivationTrigger.cs" t="Include" />
             <e p="EnemyAI.cs" t="Include" />
             <e p="EnemyAnimation.cs" t="Include" />
             <e p="EnemyAnimationEvents.cs" t="Include" />

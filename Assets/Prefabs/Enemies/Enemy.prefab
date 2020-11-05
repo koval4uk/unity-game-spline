@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 7949838429277049178}
   - component: {fileID: 159593353}
   - component: {fileID: 159593354}
+  - component: {fileID: 5590843383176685786}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -637,6 +638,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trolleyRigidbody: {fileID: 1003976981900378828}
   stickmanRigidbody: {fileID: 4107118317142144223}
+--- !u!114 &5590843383176685786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238075734714281406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea83677c9c4b80a478fd0828ef2cae39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayType: 0
 --- !u!1 &664714668056319371
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6698180609546903935}
   - component: {fileID: 3917314913143986677}
+  - component: {fileID: 753294759702701760}
   m_Layer: 0
   m_Name: ActivationTrigger
   m_TagString: Untagged
@@ -929,7 +944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5841411658594884092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.62, z: 0}
+  m_LocalPosition: {x: 0, y: 1.34, z: -16.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 238075734714281405}
@@ -943,11 +958,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5841411658594884092}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 10, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &753294759702701760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5841411658594884092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7581633c2379314b81340f78c10b365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickmanEvents: {fileID: 238075734714281392}
 --- !u!1 &8036141469922935052
 GameObject:
   m_ObjectHideFlags: 0

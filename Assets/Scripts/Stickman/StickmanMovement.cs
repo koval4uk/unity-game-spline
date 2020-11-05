@@ -7,12 +7,13 @@ using UnityEngine;
 public class StickmanMovement : MonoBehaviour
 {
     [SerializeField] private float startMovementSpeed;
-    private float currentMovementSpeed;
     [SerializeField] private float limitMovementSpeed;
     [SerializeField] private float forwardSpeedStep;
     
     private StickmanEvents stickmanEvents;
     private SplineFollower follower;
+    private EnemyActivation enemyActivation;
+    private float currentMovementSpeed;
     private float speedMultiplier = 1f;
     private float lastHeight;
     private float speedIncrease = GameConstants.PlayerIncreaseSpeed;
@@ -28,7 +29,7 @@ public class StickmanMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        stickmanEvents.OnMove += StartMove;
+        stickmanEvents.OnMove += delegate { StartCoroutine(ActivateMovement()); };
         stickmanEvents.OnChangeSpeed += SetSpeed;
         stickmanEvents.OnMultiplySpeed += SetSpeedMultiplier;
         stickmanEvents.OnRailwayEnd += StopMove;
@@ -46,6 +47,7 @@ public class StickmanMovement : MonoBehaviour
     {
         stickmanEvents = GetComponent<StickmanEvents>();
         follower = GetComponent<SplineFollower>();
+        enemyActivation = GetComponent<EnemyActivation>();
     }
 
     private void Init()
@@ -56,9 +58,34 @@ public class StickmanMovement : MonoBehaviour
         lastHeight = transform.position.y;
     }
 
-    private void StartMove()
+    private IEnumerator ActivateMovement()
     {
         Debug.Log($"Stickman {gameObject.name} start moving");
+        if (stickmanEvents.IsPlayer)
+        {
+            StartMove();
+        }
+        else
+        {
+            switch (enemyActivation.delayType)
+            {
+                case DelayActivationType.NoDelay:
+                    StartMove();
+                    break;
+                case DelayActivationType.DelayByTime:
+                    yield return new WaitForSeconds(enemyActivation.delayTime);
+                    StartMove();
+                    break;
+                case DelayActivationType.DelayByTrigger:
+                    stickmanEvents.OnActivate += StartMove;
+                    stickmanEvents.OnActivateTrigger();
+                    break;
+            }
+        }
+    }
+
+    private void StartMove()
+    {
         follower.follow = true;
         increaseSpeedCoroutine = StartCoroutine(IncreaseSpeed());
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StickmanEvents : MonoBehaviour
 {
-    public Action OnMove = delegate { Debug.Log("OnMove Triggered!" ); };
+    public Action<DelayActivationType> OnMove = delegate { Debug.Log("OnMove Triggered!" ); };
     public Action<float> OnChangeSpeed = delegate { Debug.Log("OnChangeSpeed Triggered!"); };
     public Action<float> OnMultiplySpeed = delegate { Debug.Log("OnMultiplySpeed Triggered!"); };
     public Action OnSetInitialSpeed = delegate { Debug.Log("OnSetInitialSpeed Triggered!"); };
@@ -17,6 +17,8 @@ public class StickmanEvents : MonoBehaviour
     public Action OnSlowSpeed = delegate { Debug.Log("OnHighSpeedReached!"); };
     
     // Unique events for enemy
+    public Action OnActivate = delegate { Debug.Log("OnActivate!"); };
+    public Action OnActivateTrigger = delegate { Debug.Log("OnActivateTrigger!"); };
     public Action OnObstacleDetected = delegate { Debug.Log("OnObstacleDetected Triggered!"); };
     public Action<int> OnSwitchRailway = delegate { Debug.Log("OnSwitchRailway triggered with index"); }; // Возвращает индекс дорожки (0, 1, 2)
     public Action OnHitFromBehind = delegate { Debug.Log("OnHitFromBehind Triggered!"); };
@@ -39,7 +41,15 @@ public class StickmanEvents : MonoBehaviour
     private void SubscribeEvents(int empty)
     {
         Debug.Log("Subscribe Events");
-        Observer.Instance.OnStartGame += OnMove;
+        if (isPlayer)
+            Observer.Instance.OnStartGame += delegate { OnMove(DelayActivationType.NoDelay); };
     }
+
+    public void Subscribe()
+    {
+        
+    }
+    
+    
     
 }
