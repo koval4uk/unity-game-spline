@@ -8,6 +8,11 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Adjust" t="Include">
+          <e p="Android" t="Include">
+            <e p="AdjustAndroidManifest.xml" t="Include" />
+          </e>
+        </e>
         <e p="BizulkaProduction" t="Include">
           <e p="Stickman" t="Include">
             <e p="README.txt" t="Include" />
@@ -632,6 +637,20 @@
             </e>
           </e>
         </e>
+        <e p="LionStudios" t="Include">
+          <e p="GDPR" t="Include">
+            <e p="Resources" t="Include">
+              <e p="GDPR_Strings.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="MaxSdk" t="Include">
+          <e p="AppLovin" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Dependencies.xml" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Other" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -770,6 +789,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AnalyticsManager.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="DebugTools.cs" t="Include" />
           <e p="Enemy" t="Include">

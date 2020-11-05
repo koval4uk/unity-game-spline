@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Singleton;
 
-public class LevelManager : MonoBehaviour
+public class LevelManager : Singleton<LevelManager>
 {
     [SerializeField] private int currentLevel;
     private int maxLevelCount;
@@ -14,7 +15,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnEnable()
     {
-        maxLevelCount = SceneManager.sceneCountInBuildSettings;
+        maxLevelCount = SceneManager.sceneCountInBuildSettings - 1;
         SubscribeToNecessaryEvets();
     }
 
@@ -33,7 +34,7 @@ public class LevelManager : MonoBehaviour
     {
         currentLevel = PlayerPrefs.HasKey(GameConstants.PrefsCurrentLevel)
             ? PlayerPrefs.GetInt(GameConstants.PrefsCurrentLevel)
-            : 0;
+            : 1;
 
         Observer.Instance.OnLevelManagerLoaded(currentLevel);
     }
@@ -49,11 +50,17 @@ public class LevelManager : MonoBehaviour
         Debug.Log("UpdateActiveLevel");
         Debug.Log($"<color=red> Setted active level prefs to currentlevel = {currentLevel} </color>");
         currentLevel++;
-        if (currentLevel >= maxLevelCount)
-        {
-            currentLevel = 0;
-        }
+        CheckFinishedGame();
         PlayerPrefs.SetInt(GameConstants.PrefsCurrentLevel, currentLevel);
+    }
+
+    private void CheckFinishedGame()
+    {
+        if(currentLevel > maxLevelCount)
+        {
+            currentLevel = 1;
+            PlayerPrefs.SetInt(GameConstants.PrefsFinished, 1);
+        }
     }
 
     private void RestartLevel()
@@ -67,4 +74,5 @@ public class LevelManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey(GameConstants.PrefsCurrentLevel);
     }
+
 }
