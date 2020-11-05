@@ -43,6 +43,7 @@ public class EnemyAnimation : MonoBehaviour
     {
         follower.follow = false;
         transform.DOMove(transform.position + transform.up * 8, 0.5f);
+        StartCoroutine(FallDownForSeconds(0.5f));
     }
 
     private void GetKickedFromLeft()
@@ -50,6 +51,7 @@ public class EnemyAnimation : MonoBehaviour
         follower.follow = false;
         transform.DOMove(transform.position - transform.right * 8, 0.5f);
         transform.DORotateQuaternion(Quaternion.LookRotation(transform.forward, -transform.right), 0.5f);
+        StartCoroutine(FallDownForSeconds(0.5f));
     }
 
     private void GetKickedFromRight()
@@ -57,6 +59,13 @@ public class EnemyAnimation : MonoBehaviour
         follower.follow = false;
         transform.DOMove(transform.position + transform.right * 8, 0.5f);
         transform.DORotateQuaternion(Quaternion.LookRotation(transform.forward, transform.right), 0.5f);
+        StartCoroutine(FallDownForSeconds(0.5f));
+    }
+
+    private IEnumerator FallDownForSeconds(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        enemyAnimationEvents.FallDown();
     }
 
     private void FallDown()
@@ -83,6 +92,7 @@ public class EnemyAnimation : MonoBehaviour
     private IEnumerator Deactivate()
     {
         yield return new WaitForSeconds(4.0f);
+        gameObject.SetActive(false);
     }
 
 }
