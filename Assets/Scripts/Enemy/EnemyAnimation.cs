@@ -42,23 +42,23 @@ public class EnemyAnimation : MonoBehaviour
     private void GetKickedFromBehind()
     {
         follower.follow = false;
-        transform.DOMoveY(8f, 0.5f);
+        transform.DOMove(transform.position + transform.up * 8, 0.5f);
     }
 
     private void GetKickedFromLeft()
     {
         follower.follow = false;
-        transform.DOMoveX(-8f, 0.5f);
-        transform.DORotate(new Vector3(0f, 0f, 90f), 0.5f);
+        transform.DOMove(transform.position - transform.right * 8, 0.5f);
+        transform.DORotateQuaternion(Quaternion.LookRotation(transform.forward, -transform.right), 0.5f);
     }
 
     private void GetKickedFromRight()
     {
         follower.follow = false;
-        transform.DOMoveX(8f, 0.5f);
-        transform.DORotate(new Vector3(0f, 0f, -90f), 0.5f);
+        transform.DOMove(transform.position + transform.right * 8, 0.5f);
+        transform.DORotateQuaternion(Quaternion.LookRotation(transform.forward, transform.right), 0.5f);
     }
-    
+
     private void FallDown()
     {
         animator.SetTrigger(dieHash);
