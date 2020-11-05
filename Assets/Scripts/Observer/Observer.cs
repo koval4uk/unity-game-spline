@@ -3,6 +3,7 @@ using UnityEngine;
 using Singleton;
 public class Observer : Singleton<Observer>
 {
+    
     public Action OnLoseLevel = delegate { Debug.Log("OnLoseLevel trigerred"); };
     public Action OnWinLevel = delegate { Debug.Log("OnWinLevel trigerred"); };
 
@@ -15,10 +16,11 @@ public class Observer : Singleton<Observer>
     public Action OnLoadNextLevel = delegate { Debug.Log("OnLoadNextLevel trigerred"); };
     public Action<int> OnAddingScore = delegate { Debug.Log("OnAddingScore trigerred"); };
     public Action<StimulType> OnGetStimulationText = delegate { Debug.Log("OnGetStimulationText triggered"); };
-    
-    private void Awake()
+
+    private void Start()
     {
-        Debug.Log("Awake Observer");
+        if(FindObjectOfType<AnalyticsManager>())
+            AnalyticsManager.Instance.OnObserverLoaded(this);
     }
 
     public Action OnLeftMouseButtonDown;

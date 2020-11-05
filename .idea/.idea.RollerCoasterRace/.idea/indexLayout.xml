@@ -3,7 +3,11 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
-      <Path>Library/PackageCache/com.unity.ads@2.0.8</Path>
+      <Path>Library/PackageCache/com.google.external-dependency-manager@1.2.160</Path>
+      <Path>Library/PackageCache/com.google.firebase.analytics@6.16.0</Path>
+      <Path>Library/PackageCache/com.google.firebase.app@6.16.0</Path>
+      <Path>Library/PackageCache/com.lionstudios.release.lionkit@1.1.56</Path>
+      <Path>Library/PackageCache/com.lionstudios.release.localization@1.0.23</Path>
       <Path>Library/PackageCache/com.unity.analytics@3.2.2</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
