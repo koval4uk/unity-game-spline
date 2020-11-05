@@ -60,23 +60,26 @@ public class StickmanMovement : MonoBehaviour
 
     private IEnumerator ActivateMovement()
     {
-        Debug.Log($"Stickman {gameObject.name} start moving");
         if (stickmanEvents.IsPlayer)
         {
             StartMove();
         }
         else
         {
+            Debug.Log($"<color=red>ActivateMovement in {gameObject.name} </color>");
             switch (enemyActivation.delayType)
             {
                 case DelayActivationType.NoDelay:
+                    Debug.Log("<color=red>NoDelay!</color>");
                     StartMove();
                     break;
                 case DelayActivationType.DelayByTime:
+                    Debug.Log("<color=red>DelayByTime!</color>");
                     yield return new WaitForSeconds(enemyActivation.delayTime);
                     StartMove();
                     break;
                 case DelayActivationType.DelayByTrigger:
+                    Debug.Log("<color=red>DelayByTrigger!</color>");
                     stickmanEvents.OnActivate += StartMove;
                     stickmanEvents.OnActivateTrigger();
                     break;

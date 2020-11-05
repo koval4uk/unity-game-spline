@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StickmanEvents : MonoBehaviour
 {
-    public Action<DelayActivationType> OnMove = delegate { Debug.Log("OnMove Triggered!" ); };
+    public Action OnMove = delegate { Debug.Log("OnMove Triggered!" ); };
     public Action<float> OnChangeSpeed = delegate { Debug.Log("OnChangeSpeed Triggered!"); };
     public Action<float> OnMultiplySpeed = delegate { Debug.Log("OnMultiplySpeed Triggered!"); };
     public Action OnSetInitialSpeed = delegate { Debug.Log("OnSetInitialSpeed Triggered!"); };
@@ -13,8 +13,8 @@ public class StickmanEvents : MonoBehaviour
     public Action OnFinish = delegate { Debug.Log("OnFinish Triggered!"); };
     public Action OnRailwayEnd = delegate { Debug.Log("<color=red>OnRailwayEnd Triggered!</color>"); };
     public Action OnTeeterSwitch = delegate { Debug.Log("OnRailwayEnd Triggered!"); };
-    public Action OnHighSpeedReached = delegate { Debug.Log("OnHighSpeedReached!"); };
-    public Action OnSlowSpeed = delegate { Debug.Log("OnHighSpeedReached!"); };
+    public Action OnHighSpeedReached = delegate {  };
+    public Action OnSlowSpeed =  delegate {  };
     
     // Unique events for enemy
     public Action OnActivate = delegate { Debug.Log("OnActivate!"); };
@@ -40,16 +40,6 @@ public class StickmanEvents : MonoBehaviour
 
     private void SubscribeEvents(int empty)
     {
-        Debug.Log("Subscribe Events");
-        if (isPlayer)
-            Observer.Instance.OnStartGame += delegate { OnMove(DelayActivationType.NoDelay); };
+        Observer.Instance.OnStartGame += OnMove;
     }
-
-    public void Subscribe()
-    {
-        
-    }
-    
-    
-    
 }
