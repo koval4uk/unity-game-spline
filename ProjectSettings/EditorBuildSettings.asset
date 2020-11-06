@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelsComplete(Alex)/Level_0002.unity
     guid: 3373d02011223724dbf1d70f2940bfc9
+  - enabled: 1
+    path: Assets/Scenes/LevelsComplete(Alex)/Level_0003.unity
+    guid: bc3ae8a9ba4fc5b489486f5c3c118f20
+  - enabled: 1
+    path: Assets/Scenes/Level_0004.unity
+    guid: 62995abc430153c49b48ee7e8786a1c9
   m_configObjects: {}
