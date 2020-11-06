@@ -66,20 +66,16 @@ public class StickmanMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log($"<color=red>ActivateMovement in {gameObject.name} </color>");
             switch (enemyActivation.delayType)
             {
                 case DelayActivationType.NoDelay:
-                    Debug.Log("<color=red>NoDelay!</color>");
                     StartMove();
                     break;
                 case DelayActivationType.DelayByTime:
-                    Debug.Log("<color=red>DelayByTime!</color>");
                     yield return new WaitForSeconds(enemyActivation.delayTime);
                     StartMove();
                     break;
                 case DelayActivationType.DelayByTrigger:
-                    Debug.Log("<color=red>DelayByTrigger!</color>");
                     stickmanEvents.OnActivate += StartMove;
                     stickmanEvents.OnActivateTrigger();
                     break;
@@ -145,12 +141,12 @@ public class StickmanMovement : MonoBehaviour
         
         if (lastHeight > transform.position.y)
         {
-            Debug.Log("Increase Speed!");
+            //Debug.Log("Increase Speed!");
             lastHeight = transform.position.y;
             return speedIncrease;
         }
 
-        Debug.Log("Decrease Speed!");
+        //Debug.Log("Decrease Speed!");
         lastHeight = transform.position.y;
         return speedDecrease;
     }

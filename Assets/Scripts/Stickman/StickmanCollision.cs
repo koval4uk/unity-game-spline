@@ -45,7 +45,7 @@ public class StickmanCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Trigger with {other.gameObject.name}");
+        //Debug.Log($"Trigger with {other.gameObject.name}");
         if (other.CompareTag(GameConstants.TagObstacle))
         {
             Debug.Log("Trigger with Wall!");
