@@ -17,8 +17,18 @@ public class BrickExplosion : MonoBehaviour
 
     public void Explode(Vector3 explodePosition)
     {
+        transform.SetParent(null);
         rigidbody.useGravity = true;
         rigidbody.isKinematic = false;
         rigidbody.AddExplosionForce(explodePower, explodePosition, explodeRadius, explodeUpForce, ForceMode.Impulse);
+        StartCoroutine(Deactivate());
     }
+
+    private IEnumerator Deactivate()
+    {
+        yield return new WaitForSeconds(4.0f);
+        gameObject.SetActive(false);
+    }
+    
+    
 }

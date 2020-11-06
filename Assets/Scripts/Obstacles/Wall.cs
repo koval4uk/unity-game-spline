@@ -16,17 +16,16 @@ public class Wall : MonoBehaviour, IObstacle
     public void Initiate(StickmanEvents stickmanEvents)
     {
         stickmanEvents.OnChangeSpeed(2.0f);
-        StartCoroutine(DestroyAnimation(stickmanEvents.transform.position));
+        DestroyAnimation(stickmanEvents.transform.position);
     }
 
-    private IEnumerator DestroyAnimation(Vector3 explodePosition)
+    private void DestroyAnimation(Vector3 explodePosition)
     {
         Debug.Log("Destroy Animation");
         foreach (var brick in allBricks)
         {
             brick.Explode(explodePosition);
         }
-        yield return new WaitForSeconds(4.0f);
         gameObject.SetActive(false);
     }
 }

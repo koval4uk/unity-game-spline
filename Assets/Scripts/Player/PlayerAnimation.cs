@@ -92,11 +92,11 @@ public class PlayerAnimation : MonoBehaviour
         {
             warpEffect.Play();
             
-            Debug.Log("<color=red>Play Warp Effect!</color>");
+            //Debug.Log("<color=red>Play Warp Effect!</color>");
         }
         else if(!isHighSpeed && warpEffect.isPlaying)
         {
-            Debug.Log("<color=red>Stop Warp Effect!</color>");
+            //Debug.Log("<color=red>Stop Warp Effect!</color>");
             warpEffect.Stop();
         }
     }

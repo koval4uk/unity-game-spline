@@ -2,145 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ffdc2b2-88a6-4f63-bc7e-ee1b74716888" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Adjust.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Adjust/Android.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Adjust/Android/AdjustAndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Adjust/Android/AdjustAndroidManifest.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/Debugger.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/Debugger.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/LionDebugger.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/LionDebugger.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_button.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_button.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_info_label.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_info_label.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_live_label.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_live_label.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_tab.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Debugger/debug_tab.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrp.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrp.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrpPrompt_2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrpPrompt_2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrpPrompt_3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrpPrompt_3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrpPrompt_4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/ButtonGrps/ButtonGrpPrompt_4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks/Check.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks/Check.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks/SecondCheck Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks/SecondCheck Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks/ThirdCheck Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Checks/ThirdCheck Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/GDPR.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/GDPR.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/PrivacyControls.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/PrivacyControls/Control.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/PrivacyControls/Control.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/PrivacyControls/ControlAdvertising.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/PrivacyControls/ControlAdvertising.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Prompt.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Prompt.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Resources/GDPR_Strings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Resources/GDPR_Strings.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Resources/acherusgrotesque-black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Resources/acherusgrotesque-black.otf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/9_Slice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/9_Slice.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Check.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_btn_white_256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_btn_white_256.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_headerFrame256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_headerFrame256.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_LionStudios256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_LionStudios256.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_checkmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_checkmark.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_warningExclamation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_warningExclamation.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_warningTriangle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_icon_warningTriangle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_switch_circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_switch_circle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_switch_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Formatted/ui_switch_white.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Outline_9_Slice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/Outline_9_Slice.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/WarningIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Sprites/WarningIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/Text.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/Text.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextGroup.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextGroup.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextPrompt_2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextPrompt_2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextPrompt_3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextPrompt_3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextPrompt_4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Text/TextPrompt_4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Title.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Title/Title Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Title/Title Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Title/Title.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/GDPR/Title/Title.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Resources/LionStudios.LionSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LionStudios/Resources/LionStudios.LionSettings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor/Dependencies.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/AppLovin/Editor/Dependencies.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerBottom.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerBottom.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerTop.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/BannerTop.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Interstitial.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Interstitial.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Rewarded.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Prefabs/Rewarded.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/alert_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/alert_icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/uninstall_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MaxSdk/Resources/Images/uninstall_icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/baseProjectTemplate.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/baseProjectTemplate.gradle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/gradleTemplate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/gradleTemplate.properties.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/launcherTemplate.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/launcherTemplate.gradle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/res.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/res/xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/res/xml/network_security_config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/res/xml/network_security_config.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RollerCoasterRace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RegularTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RegularTemplate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UIPrefabs/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelsComplete(Alex)/Level_0001.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelsComplete(Alex)/Level_0001.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Observer/Observer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Observer/Observer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/EndPanelLevelText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/EndPanelLevelText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/EffectsHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -232,8 +99,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Nitro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Modificators/IModificator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanModificator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PositionSystem.cs" />
@@ -253,17 +118,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanFall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIAnimationManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyActivationTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyActivation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Observer/Observer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameConstants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EndPanelLevelText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnalyticsManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stickman/StickmanEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/Wall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Obstacles/BrickExplosion.cs" />
       </list>
     </option>
   </component>
@@ -325,7 +192,8 @@
       <workItem from="1604295693334" duration="16639000" />
       <workItem from="1604384610968" duration="15629000" />
       <workItem from="1604469669027" duration="13389000" />
-      <workItem from="1604555413103" duration="9257000" />
+      <workItem from="1604555413103" duration="10745000" />
+      <workItem from="1604644727959" duration="560000" />
     </task>
     <servers />
   </component>

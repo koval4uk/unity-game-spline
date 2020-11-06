@@ -34,7 +34,6 @@ public class StickmanEvents : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log($"Enable events {gameObject.name}");
         Observer.Instance.OnLevelManagerLoaded += SubscribeEvents;
     }
 
